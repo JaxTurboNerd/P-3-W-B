@@ -7,23 +7,59 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		93024447255E002B00DA503F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93024446255E002B00DA503F /* AppDelegate.swift */; };
-		93024449255E002B00DA503F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93024448255E002B00DA503F /* SceneDelegate.swift */; };
-		9302444B255E002B00DA503F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9302444A255E002B00DA503F /* ContentView.swift */; };
 		9302444D255E002D00DA503F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9302444C255E002D00DA503F /* Assets.xcassets */; };
 		93024450255E002D00DA503F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9302444F255E002D00DA503F /* Preview Assets.xcassets */; };
 		93024453255E002D00DA503F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93024451255E002D00DA503F /* LaunchScreen.storyboard */; };
+		93024462255E00CF00DA503F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9302445C255E00CF00DA503F /* ContentView.swift */; };
+		93024463255E00CF00DA503F /* NumberTextfield.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9302445D255E00CF00DA503F /* NumberTextfield.swift */; };
+		93024464255E00CF00DA503F /* weightViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9302445E255E00CF00DA503F /* weightViewModel.swift */; };
+		93024465255E00CF00DA503F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9302445F255E00CF00DA503F /* SceneDelegate.swift */; };
+		93024466255E00CF00DA503F /* CustomPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93024460255E00CF00DA503F /* CustomPickerView.swift */; };
+		93024467255E00CF00DA503F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93024461255E00CF00DA503F /* AppDelegate.swift */; };
+		93024478255E00E900DA503F /* LRTView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9302446A255E00E900DA503F /* LRTView.swift */; };
+		93024479255E00E900DA503F /* LRTPositionWeightView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9302446B255E00E900DA503F /* LRTPositionWeightView.swift */; };
+		9302447A255E00E900DA503F /* SavedHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9302446C255E00E900DA503F /* SavedHeaderView.swift */; };
+		9302447B255E00E900DA503F /* FuelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9302446D255E00E900DA503F /* FuelView.swift */; };
+		9302447C255E00E900DA503F /* AEWView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9302446E255E00E900DA503F /* AEWView.swift */; };
+		9302447D255E00E900DA503F /* VertInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9302446F255E00E900DA503F /* VertInputView.swift */; };
+		9302447E255E00E900DA503F /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93024470255E00E900DA503F /* HeaderView.swift */; };
+		9302447F255E00E900DA503F /* HorizontalInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93024471255E00E900DA503F /* HorizontalInputView.swift */; };
+		93024480255E00E900DA503F /* HeaderSubView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93024472255E00E900DA503F /* HeaderSubView.swift */; };
+		93024481255E00E900DA503F /* CargoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93024473255E00E900DA503F /* CargoView.swift */; };
+		93024482255E00E900DA503F /* AEWPositionWeightView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93024474255E00E900DA503F /* AEWPositionWeightView.swift */; };
+		93024483255E00E900DA503F /* SavedDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93024475255E00E900DA503F /* SavedDataView.swift */; };
+		93024484255E00E900DA503F /* MiscView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93024476255E00E900DA503F /* MiscView.swift */; };
+		93024485255E00E900DA503F /* ButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93024477255E00E900DA503F /* ButtonView.swift */; };
+		937F194E255E10620073F820 /* SavedWeights.swift in Sources */ = {isa = PBXBuildFile; fileRef = 937F194D255E10620073F820 /* SavedWeights.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		93024443255E002B00DA503F /* W&BUserDefaults.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "W&BUserDefaults.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		93024446255E002B00DA503F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		93024448255E002B00DA503F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		9302444A255E002B00DA503F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		9302444C255E002D00DA503F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9302444F255E002D00DA503F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		93024452255E002D00DA503F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		93024454255E002D00DA503F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9302445C255E00CF00DA503F /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = SOURCE_ROOT; };
+		9302445D255E00CF00DA503F /* NumberTextfield.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NumberTextfield.swift; sourceTree = SOURCE_ROOT; };
+		9302445E255E00CF00DA503F /* weightViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = weightViewModel.swift; sourceTree = SOURCE_ROOT; };
+		9302445F255E00CF00DA503F /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = SOURCE_ROOT; };
+		93024460255E00CF00DA503F /* CustomPickerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomPickerView.swift; sourceTree = SOURCE_ROOT; };
+		93024461255E00CF00DA503F /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = SOURCE_ROOT; };
+		9302446A255E00E900DA503F /* LRTView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LRTView.swift; sourceTree = "<group>"; };
+		9302446B255E00E900DA503F /* LRTPositionWeightView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LRTPositionWeightView.swift; sourceTree = "<group>"; };
+		9302446C255E00E900DA503F /* SavedHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SavedHeaderView.swift; sourceTree = "<group>"; };
+		9302446D255E00E900DA503F /* FuelView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FuelView.swift; sourceTree = "<group>"; };
+		9302446E255E00E900DA503F /* AEWView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AEWView.swift; sourceTree = "<group>"; };
+		9302446F255E00E900DA503F /* VertInputView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VertInputView.swift; sourceTree = "<group>"; };
+		93024470255E00E900DA503F /* HeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
+		93024471255E00E900DA503F /* HorizontalInputView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HorizontalInputView.swift; sourceTree = "<group>"; };
+		93024472255E00E900DA503F /* HeaderSubView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeaderSubView.swift; sourceTree = "<group>"; };
+		93024473255E00E900DA503F /* CargoView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CargoView.swift; sourceTree = "<group>"; };
+		93024474255E00E900DA503F /* AEWPositionWeightView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AEWPositionWeightView.swift; sourceTree = "<group>"; };
+		93024475255E00E900DA503F /* SavedDataView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SavedDataView.swift; sourceTree = "<group>"; };
+		93024476255E00E900DA503F /* MiscView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MiscView.swift; sourceTree = "<group>"; };
+		93024477255E00E900DA503F /* ButtonView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonView.swift; sourceTree = "<group>"; };
+		937F194D255E10620073F820 /* SavedWeights.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedWeights.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,9 +92,14 @@
 		93024445255E002B00DA503F /* W&BUserDefaults */ = {
 			isa = PBXGroup;
 			children = (
-				93024446255E002B00DA503F /* AppDelegate.swift */,
-				93024448255E002B00DA503F /* SceneDelegate.swift */,
-				9302444A255E002B00DA503F /* ContentView.swift */,
+				93024461255E00CF00DA503F /* AppDelegate.swift */,
+				9302445F255E00CF00DA503F /* SceneDelegate.swift */,
+				9302445E255E00CF00DA503F /* weightViewModel.swift */,
+				937F194D255E10620073F820 /* SavedWeights.swift */,
+				93024469255E00E900DA503F /* Child Views */,
+				93024460255E00CF00DA503F /* CustomPickerView.swift */,
+				9302445D255E00CF00DA503F /* NumberTextfield.swift */,
+				9302445C255E00CF00DA503F /* ContentView.swift */,
 				9302444C255E002D00DA503F /* Assets.xcassets */,
 				93024451255E002D00DA503F /* LaunchScreen.storyboard */,
 				93024454255E002D00DA503F /* Info.plist */,
@@ -74,6 +115,27 @@
 			);
 			path = "Preview Content";
 			sourceTree = "<group>";
+		};
+		93024469255E00E900DA503F /* Child Views */ = {
+			isa = PBXGroup;
+			children = (
+				9302446A255E00E900DA503F /* LRTView.swift */,
+				9302446B255E00E900DA503F /* LRTPositionWeightView.swift */,
+				9302446C255E00E900DA503F /* SavedHeaderView.swift */,
+				9302446D255E00E900DA503F /* FuelView.swift */,
+				9302446E255E00E900DA503F /* AEWView.swift */,
+				9302446F255E00E900DA503F /* VertInputView.swift */,
+				93024470255E00E900DA503F /* HeaderView.swift */,
+				93024471255E00E900DA503F /* HorizontalInputView.swift */,
+				93024472255E00E900DA503F /* HeaderSubView.swift */,
+				93024473255E00E900DA503F /* CargoView.swift */,
+				93024474255E00E900DA503F /* AEWPositionWeightView.swift */,
+				93024475255E00E900DA503F /* SavedDataView.swift */,
+				93024476255E00E900DA503F /* MiscView.swift */,
+				93024477255E00E900DA503F /* ButtonView.swift */,
+			);
+			path = "Child Views";
+			sourceTree = SOURCE_ROOT;
 		};
 /* End PBXGroup section */
 
@@ -106,6 +168,7 @@
 				TargetAttributes = {
 					93024442255E002B00DA503F = {
 						CreatedOnToolsVersion = 12.1;
+						LastSwiftMigration = 1210;
 					};
 				};
 			};
@@ -145,9 +208,27 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				93024447255E002B00DA503F /* AppDelegate.swift in Sources */,
-				93024449255E002B00DA503F /* SceneDelegate.swift in Sources */,
-				9302444B255E002B00DA503F /* ContentView.swift in Sources */,
+				9302447A255E00E900DA503F /* SavedHeaderView.swift in Sources */,
+				93024481255E00E900DA503F /* CargoView.swift in Sources */,
+				93024485255E00E900DA503F /* ButtonView.swift in Sources */,
+				93024479255E00E900DA503F /* LRTPositionWeightView.swift in Sources */,
+				9302447C255E00E900DA503F /* AEWView.swift in Sources */,
+				9302447F255E00E900DA503F /* HorizontalInputView.swift in Sources */,
+				93024478255E00E900DA503F /* LRTView.swift in Sources */,
+				93024467255E00CF00DA503F /* AppDelegate.swift in Sources */,
+				9302447B255E00E900DA503F /* FuelView.swift in Sources */,
+				93024483255E00E900DA503F /* SavedDataView.swift in Sources */,
+				93024482255E00E900DA503F /* AEWPositionWeightView.swift in Sources */,
+				93024463255E00CF00DA503F /* NumberTextfield.swift in Sources */,
+				93024466255E00CF00DA503F /* CustomPickerView.swift in Sources */,
+				93024462255E00CF00DA503F /* ContentView.swift in Sources */,
+				93024464255E00CF00DA503F /* weightViewModel.swift in Sources */,
+				93024484255E00E900DA503F /* MiscView.swift in Sources */,
+				9302447D255E00E900DA503F /* VertInputView.swift in Sources */,
+				93024465255E00CF00DA503F /* SceneDelegate.swift in Sources */,
+				93024480255E00E900DA503F /* HeaderSubView.swift in Sources */,
+				9302447E255E00E900DA503F /* HeaderView.swift in Sources */,
+				937F194E255E10620073F820 /* SavedWeights.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -286,6 +367,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"W&BUserDefaults/Preview Content\"";
 				DEVELOPMENT_TEAM = YKY42GMVFE;
@@ -297,6 +379,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.GregoryBoyd.W-BUserDefaults";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -307,6 +390,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"W&BUserDefaults/Preview Content\"";
 				DEVELOPMENT_TEAM = YKY42GMVFE;
