@@ -30,7 +30,6 @@
 		93024483255E00E900DA503F /* SavedDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93024475255E00E900DA503F /* SavedDataView.swift */; };
 		93024484255E00E900DA503F /* MiscView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93024476255E00E900DA503F /* MiscView.swift */; };
 		93024485255E00E900DA503F /* ButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93024477255E00E900DA503F /* ButtonView.swift */; };
-		937F194E255E10620073F820 /* SavedWeights.swift in Sources */ = {isa = PBXBuildFile; fileRef = 937F194D255E10620073F820 /* SavedWeights.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -59,7 +58,6 @@
 		93024475255E00E900DA503F /* SavedDataView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SavedDataView.swift; sourceTree = "<group>"; };
 		93024476255E00E900DA503F /* MiscView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MiscView.swift; sourceTree = "<group>"; };
 		93024477255E00E900DA503F /* ButtonView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonView.swift; sourceTree = "<group>"; };
-		937F194D255E10620073F820 /* SavedWeights.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedWeights.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,7 +93,6 @@
 				93024461255E00CF00DA503F /* AppDelegate.swift */,
 				9302445F255E00CF00DA503F /* SceneDelegate.swift */,
 				9302445E255E00CF00DA503F /* weightViewModel.swift */,
-				937F194D255E10620073F820 /* SavedWeights.swift */,
 				93024469255E00E900DA503F /* Child Views */,
 				93024460255E00CF00DA503F /* CustomPickerView.swift */,
 				9302445D255E00CF00DA503F /* NumberTextfield.swift */,
@@ -228,7 +225,6 @@
 				93024465255E00CF00DA503F /* SceneDelegate.swift in Sources */,
 				93024480255E00E900DA503F /* HeaderSubView.swift in Sources */,
 				9302447E255E00E900DA503F /* HeaderView.swift in Sources */,
-				937F194E255E10620073F820 /* SavedWeights.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
