@@ -10,18 +10,13 @@ import Combine
 import Foundation
 
 final class AircraftData: ObservableObject {
-    //@Published var aircraftType = ""
     @Published var selectedAircraft = ""
     @Published var presentPicker = false
     @Published var basicWeight = "00000"
     @Published var savedDate = "MMM dd YYYY"
-    //@Published var selectedLRT = ""
-    //@Published var selectedAEW = ""
     @Published var alertTrigger = false
     @Published var aircraftIsLRT = false
-    //@Published var aircraftIsAEW = false
-    private var aircraftMoment = 37311.6
-    
+    @Published var aircraftMoment = 39000.0
     
     //Fuel
     @Published var tank1 = 0
@@ -29,6 +24,7 @@ final class AircraftData: ObservableObject {
     @Published var tank3 = 0
     @Published var tank4 = 0
     @Published var tank5 = 0
+    //@Published var computedFuel = 0
     
     //Position Weights:
     @Published var pilot            = 200
@@ -67,15 +63,16 @@ final class AircraftData: ObservableObject {
     var grossWeight: String {
         String(Int(ZFW)! + totalFuel)
     }
-    private var totalFuel:Int {
+    var totalFuel:Int {
         tank1 + tank2 + tank3 + tank4 + tank5
     }
     
     private var lrtPositionWeights: Int {
-        pilot + copilot + fe + flightStaObs + portFwdObs + stbFwdObs + fwdCargo + tfo1 + tfo2 + tfo3 + tfo4 + firstClassSeats + portAftObs + stbAftObs    }
+        pilot + copilot + fe + flightStaObs + portFwdObs + stbFwdObs + fwdCargo + tfo1 + tfo2 + tfo3 + tfo4 + firstClassSeats + portAftObs + stbAftObs
+    }
     
     private var aewPositionWeights: Int {
-        pilot + copilot + fe + flightStaObs +  fwdCargo + radarCompartment + tfo1 + tfo2 + tfo3 + tfo4 + firstClassSeats + portAftObs + stbAftObs
+        pilot + copilot + fe + flightStaObs + radarCompartment + tfo1 + tfo2 + tfo3 + tfo4 + tfo5 + firstClassSeats + portAftObs + stbAftObs
     }
     
     private var cargoWeight: Int {
@@ -93,10 +90,10 @@ final class AircraftData: ObservableObject {
     
     private var totalMoment: Double {
         if aircraftIsLRT {
-            return (Double(pilot) * 222.0) + (Double(copilot) * 222.0) + (Double(fe) * 227.0) + (Double(flightStaObs) * 256.0) + (Double(tfo1) * 572.0) + (Double(tfo2) * 572.0) +  (Double(tfo3) * 572.0) + (Double(tfo4) * 572.0) + (Double(firstClassSeats) * 768.0) + (Double(portAftObs) * 889.0) + (Double(stbAftObs) * 889.0) + (Double(cargoB) * 227.0) + (Double(cargoC) * 333.0) + (Double(cargoD) * 565.0) + (Double(cargoE) * 768.0) + (Double(cargoF) * 889.0) + (Double(cargoG) * 1021.0) + (Double(tank1) * 606.2) + (Double(tank2) * 624.5) + (Double(tank3) * 624.5) + (Double(tank4) * 606.2) + (Double(tank5) * 594.5) + (Double(bombBay) * 400.0) + (aircraftMoment * 1000.0)
+            return ((Double(pilot) * 222.0) + (Double(copilot) * 222.0) + (Double(fe) * 227.0) + (Double(flightStaObs) * 256.0) + (Double(radarCompartment) * 333.0) + (Double(tfo1) * 572.0) + (Double(tfo2) * 572.0) +  (Double(tfo3) * 572.0) + (Double(tfo4) * 572.0) + (Double(firstClassSeats) * 768.0) + (Double(portAftObs) * 889.0) + (Double(stbAftObs) * 889.0) + (Double(cargoB) * 227.0) + (Double(cargoC) * 333.0) + (Double(cargoD) * 565.0) + (Double(cargoE) * 768.0) + (Double(cargoF) * 889.0) + (Double(cargoG) * 1021.0) + (Double(tank1) * 606.2) + (Double(tank2) * 624.5) + (Double(tank3) * 624.5) + (Double(tank4) * 606.2) + (Double(tank5) * 594.5) + (Double(bombBay) * 400.0) + (Double(aircraftMoment) * 1000.0))
         }
         else {
-            return (Double(pilot) * 222.0) + (Double(copilot) * 222.0) + (Double(fe) * 227.0) + (Double(flightStaObs) * 256.0) + (Double(tfo1) * 572.0) + (Double(tfo2) * 572.0) + (Double(tfo3) * 572.0) + (Double(tfo4) * 572.0) + (Double(firstClassSeats) * 768.0) + (Double(portAftObs) * 889.0) + (Double(cargoB) * 227.0) + (Double(cargoC) * 333.0) + (Double(cargoD) * 565.0) + (Double(cargoE) * 768.0) + (Double(cargoF) * 889.0) + (Double(cargoG) * 1021.0) + (Double(tank1) * 606.2) + (Double(tank2) * 624.5) + (Double(tank3) * 624.5) + (Double(tank4) * 606.2) + (Double(tank5) * 594.5) + (Double(bombBay) * 400.0) + (aircraftMoment * 1000.0)
+            return ((Double(pilot) * 222.0) + (Double(copilot) * 222.0) + (Double(fe) * 227.0) + (Double(flightStaObs) * 256.0) + (Double(tfo1) * 572.0) + (Double(tfo2) * 572.0) + (Double(tfo3) * 572.0) + (Double(tfo4) * 572.0) + (Double(tfo5) * 572.0) + (Double(firstClassSeats) * 768.0) + (Double(portAftObs) * 889.0) + (Double(stbAftObs) * 889.0) + (Double(cargoB) * 227.0) + (Double(cargoC) * 333.0) + (Double(cargoD) * 565.0) + (Double(cargoE) * 768.0) + (Double(cargoF) * 889.0) + (Double(cargoG) * 1021.0) + (Double(tank1) * 606.2) + (Double(tank2) * 624.5) + (Double(tank3) * 624.5) + (Double(tank4) * 606.2) + (Double(tank5) * 594.5) + (Double(bombBay) * 400.0) + (Double(aircraftMoment) * 1000.0))
         }
     }
     
