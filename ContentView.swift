@@ -11,7 +11,6 @@ import SwiftUI
 struct ContentView: View {
     @EnvironmentObject private var aircraftData: AircraftData
     @State private var selected = 0
-    @State private var showAlert = false
     
     var body: some View {
         
@@ -20,27 +19,12 @@ struct ContentView: View {
                 Image(systemName: "airplane")
                 Text("LRT")
             }).tag(0)
-//            .onAppear(){
-//                //show AlERT if selectedAircraft != selectedLRT
-//                if aircraftData.alertTrigger && !aircraftData.aircraftIsLRT {
-//                    self.showAlert = true
-//                }//end if
-//            }//end onAppear
-            .alert(isPresented: $showAlert, content: {
-                Alert(title: Text("Aircraft Selection"), message: Text("Check Aircraft Selection"), dismissButton: .cancel())
-            })
+
             AEWView().tabItem({
                 Image(systemName: "circle.fill")
                 Text("AEW")
             }).tag(1)
-//            .onAppear(){
-//                if aircraftData.alertTrigger && aircraftData.aircraftIsLRT {
-//                    self.showAlert = true
-//                }//end if
-//            }//end onAppear
-            .alert(isPresented: $showAlert, content: {
-                Alert(title: Text("Aircraft Selection"), message: Text("Check Aircraft Selection"), dismissButton: .cancel())
-            })
+
             SavedDataView().tabItem({
                 Image(systemName: "heart.fill")
                 Text("Saved")

@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 52;
+	objectVersion = 50;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -18,7 +18,6 @@
 		93024467255E00CF00DA503F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93024461255E00CF00DA503F /* AppDelegate.swift */; };
 		93024478255E00E900DA503F /* LRTView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9302446A255E00E900DA503F /* LRTView.swift */; };
 		93024479255E00E900DA503F /* LRTPositionWeightView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9302446B255E00E900DA503F /* LRTPositionWeightView.swift */; };
-		9302447A255E00E900DA503F /* SavedHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9302446C255E00E900DA503F /* SavedHeaderView.swift */; };
 		9302447B255E00E900DA503F /* FuelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9302446D255E00E900DA503F /* FuelView.swift */; };
 		9302447C255E00E900DA503F /* AEWView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9302446E255E00E900DA503F /* AEWView.swift */; };
 		9302447D255E00E900DA503F /* VertInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9302446F255E00E900DA503F /* VertInputView.swift */; };
@@ -30,8 +29,6 @@
 		93024483255E00E900DA503F /* SavedDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93024475255E00E900DA503F /* SavedDataView.swift */; };
 		93024484255E00E900DA503F /* MiscView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93024476255E00E900DA503F /* MiscView.swift */; };
 		93024485255E00E900DA503F /* ButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93024477255E00E900DA503F /* ButtonView.swift */; };
-		9302A6B7256C3F92007D57DA /* AlertX in Frameworks */ = {isa = PBXBuildFile; productRef = 9302A6B6256C3F92007D57DA /* AlertX */; };
-		93440D5E25DEEAC6006CD8BB /* FuelInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93440D5D25DEEAC6006CD8BB /* FuelInputView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,7 +45,6 @@
 		93024461255E00CF00DA503F /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = SOURCE_ROOT; };
 		9302446A255E00E900DA503F /* LRTView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LRTView.swift; sourceTree = "<group>"; };
 		9302446B255E00E900DA503F /* LRTPositionWeightView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LRTPositionWeightView.swift; sourceTree = "<group>"; };
-		9302446C255E00E900DA503F /* SavedHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SavedHeaderView.swift; sourceTree = "<group>"; };
 		9302446D255E00E900DA503F /* FuelView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FuelView.swift; sourceTree = "<group>"; };
 		9302446E255E00E900DA503F /* AEWView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AEWView.swift; sourceTree = "<group>"; };
 		9302446F255E00E900DA503F /* VertInputView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VertInputView.swift; sourceTree = "<group>"; };
@@ -60,7 +56,6 @@
 		93024475255E00E900DA503F /* SavedDataView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SavedDataView.swift; sourceTree = "<group>"; };
 		93024476255E00E900DA503F /* MiscView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MiscView.swift; sourceTree = "<group>"; };
 		93024477255E00E900DA503F /* ButtonView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonView.swift; sourceTree = "<group>"; };
-		93440D5D25DEEAC6006CD8BB /* FuelInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FuelInputView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,7 +63,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9302A6B7256C3F92007D57DA /* AlertX in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -121,10 +115,8 @@
 			isa = PBXGroup;
 			children = (
 				9302446A255E00E900DA503F /* LRTView.swift */,
-				93440D5D25DEEAC6006CD8BB /* FuelInputView.swift */,
 				9302446B255E00E900DA503F /* LRTPositionWeightView.swift */,
 				93024474255E00E900DA503F /* AEWPositionWeightView.swift */,
-				9302446C255E00E900DA503F /* SavedHeaderView.swift */,
 				9302446D255E00E900DA503F /* FuelView.swift */,
 				9302446E255E00E900DA503F /* AEWView.swift */,
 				9302446F255E00E900DA503F /* VertInputView.swift */,
@@ -156,7 +148,6 @@
 			);
 			name = "P-3-WnB";
 			packageProductDependencies = (
-				9302A6B6256C3F92007D57DA /* AlertX */,
 			);
 			productName = "W&BUserDefaults";
 			productReference = 93024443255E002B00DA503F /* P-3-WnB.app */;
@@ -187,7 +178,6 @@
 			);
 			mainGroup = 9302443A255E002B00DA503F;
 			packageReferences = (
-				9302A6B5256C3F92007D57DA /* XCRemoteSwiftPackageReference "AlertX" */,
 			);
 			productRefGroup = 93024444255E002B00DA503F /* Products */;
 			projectDirPath = "";
@@ -216,12 +206,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9302447A255E00E900DA503F /* SavedHeaderView.swift in Sources */,
 				93024481255E00E900DA503F /* CargoView.swift in Sources */,
 				93024485255E00E900DA503F /* ButtonView.swift in Sources */,
 				93024479255E00E900DA503F /* LRTPositionWeightView.swift in Sources */,
 				9302447C255E00E900DA503F /* AEWView.swift in Sources */,
-				93440D5E25DEEAC6006CD8BB /* FuelInputView.swift in Sources */,
 				9302447F255E00E900DA503F /* HorizontalInputView.swift in Sources */,
 				93024478255E00E900DA503F /* LRTView.swift in Sources */,
 				93024467255E00CF00DA503F /* AppDelegate.swift in Sources */,
@@ -377,6 +365,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_ASSET_PATHS = "\"P-3-WnB/Preview Content\"";
 				DEVELOPMENT_TEAM = YKY42GMVFE;
 				ENABLE_PREVIEWS = YES;
@@ -385,7 +374,8 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.GregoryBoyd.P3-WnB";
+				MARKETING_VERSION = 1.1;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.GregoryBoyd.W-BUserDefaults";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
@@ -400,6 +390,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_ASSET_PATHS = "\"P-3-WnB/Preview Content\"";
 				DEVELOPMENT_TEAM = YKY42GMVFE;
 				ENABLE_PREVIEWS = YES;
@@ -408,7 +399,8 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.GregoryBoyd.P3-WnB";
+				MARKETING_VERSION = 1.1;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.GregoryBoyd.W-BUserDefaults";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 2;
@@ -437,25 +429,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		9302A6B5256C3F92007D57DA /* XCRemoteSwiftPackageReference "AlertX" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/neel-makhecha/AlertX";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 1.1.1;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		9302A6B6256C3F92007D57DA /* AlertX */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 9302A6B5256C3F92007D57DA /* XCRemoteSwiftPackageReference "AlertX" */;
-			productName = AlertX;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 9302443B255E002B00DA503F /* Project object */;
 }

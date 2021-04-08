@@ -9,7 +9,6 @@
 import SwiftUI
 
 struct NumberTextField<V>: UIViewRepresentable where V: Numeric & LosslessStringConvertible {
-    //add second generic paramter above for the max allowed digits?
     @Binding var value: V
     var maxValue: Int
     
@@ -42,7 +41,7 @@ struct NumberTextField<V>: UIViewRepresentable where V: Numeric & LosslessString
         }
         
         func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
-            textField.backgroundColor = UIColor.cyan
+            textField.backgroundColor = UIColor.cyan.withAlphaComponent(0.2)
             textField.borderStyle = .bezel
             return true
         }
@@ -51,6 +50,7 @@ struct NumberTextField<V>: UIViewRepresentable where V: Numeric & LosslessString
                        replacementString string: String) -> Bool {
 
             let text = textField.text as NSString?
+            
             let newValue = text?.replacingCharacters(in: range, with: string)
                         
             if let number = V(newValue ?? "0") {
@@ -63,11 +63,12 @@ struct NumberTextField<V>: UIViewRepresentable where V: Numeric & LosslessString
                 return false
             }
         }
+        
         //validate maximum values entered by user:
         func textFieldShouldEndEditing(_ textField: UITextField) -> Bool {
             let textValue = Int(textField.text!)
             if(textValue! > maxValue){
-                textField.backgroundColor = UIColor.red
+                textField.backgroundColor = UIColor.red.withAlphaComponent(0.2)
                 return false
             }
             return true

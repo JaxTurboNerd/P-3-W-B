@@ -49,12 +49,9 @@ struct CustomPickerView: View {
                                 //code to set selectedLRT/AEW variables:
                                 switch item {
                                 case "N144CS", "N145CS", "N146CS", "N147CS", "N149CS":
-                                    //next two lines used for setting the background color as error alert
-                                    self.aircraftData.alertTrigger = true
+                                    //next line used for setting the background color as error alert
                                     self.aircraftData.aircraftIsLRT = false
                                 case "N403SK", "N480SK", "N741SK":
-                                    //next two lines used for setting the background color as error alert
-                                    self.aircraftData.alertTrigger = true
                                     self.aircraftData.aircraftIsLRT = true
                                 default:
                                     break
