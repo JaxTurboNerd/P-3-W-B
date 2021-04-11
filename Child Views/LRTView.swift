@@ -27,6 +27,7 @@ struct LRTView: View {
                         MiscView()
                     }
                     .padding(.trailing)
+                    .padding(.bottom)
                 }//end HStack
             }//end VStack
             .padding()

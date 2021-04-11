@@ -24,13 +24,11 @@ struct LRTPositionWeightView: View {
     var body: some View {
         ZStack {
             VStack{
-                Spacer()
                 Text(self.aircraftData.selectedAircraft)
                     .font(.largeTitle)
                     .fontWeight(.medium)
                     .frame(width: 200, height: 55)
                     .background(Color.clear)
-                Spacer()
                 Text("Select Aircraft")
                     .fontWeight(.medium)
                     .frame(width: 200, height: 55)
@@ -41,7 +39,6 @@ struct LRTPositionWeightView: View {
                         self.aircraftData.aircraftIsLRT = true
                     }
                 
-                Spacer()
                 VStack(spacing: 10.0) {
                     HorizontalInputView(label: "Pilot:", maxWeight: 500, weight: $aircraftData.pilot)
                     HorizontalInputView(label: "Co-Pilot:", maxWeight: 500, weight: $aircraftData.copilot)

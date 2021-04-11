@@ -21,8 +21,8 @@ struct MiscView: View {
                 VertInputView(label: "Bomb Bay:", maxWeight: 2000, weight: $aircraftData.bombBay)
                     .padding(.vertical)
             }
-            ButtonView()
-                //.padding(.vertical)
+        ButtonView()
+        Spacer()
         }//end VStack
     }//end some View
 }//end struct
