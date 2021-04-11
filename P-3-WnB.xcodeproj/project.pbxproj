@@ -29,6 +29,8 @@
 		93024483255E00E900DA503F /* SavedDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93024475255E00E900DA503F /* SavedDataView.swift */; };
 		93024484255E00E900DA503F /* MiscView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93024476255E00E900DA503F /* MiscView.swift */; };
 		93024485255E00E900DA503F /* ButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93024477255E00E900DA503F /* ButtonView.swift */; };
+		931FCB462623A4A8009871F5 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 931FCB452623A4A8009871F5 /* Persistence.swift */; };
+		93D49EB02623A27D0082B346 /* P-3Wnb.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 93D49EAE2623A27D0082B346 /* P-3Wnb.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +58,8 @@
 		93024475255E00E900DA503F /* SavedDataView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SavedDataView.swift; sourceTree = "<group>"; };
 		93024476255E00E900DA503F /* MiscView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MiscView.swift; sourceTree = "<group>"; };
 		93024477255E00E900DA503F /* ButtonView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonView.swift; sourceTree = "<group>"; };
+		931FCB452623A4A8009871F5 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
+		93D49EAF2623A27D0082B346 /* P-3Wnb.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "P-3Wnb.xcdatamodel"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +103,8 @@
 				93024451255E002D00DA503F /* LaunchScreen.storyboard */,
 				93024454255E002D00DA503F /* Info.plist */,
 				9302444E255E002D00DA503F /* Preview Content */,
+				93D49EAE2623A27D0082B346 /* P-3Wnb.xcdatamodeld */,
+				931FCB452623A4A8009871F5 /* Persistence.swift */,
 			);
 			path = "P-3-WnB";
 			sourceTree = "<group>";
@@ -208,6 +214,8 @@
 			files = (
 				93024481255E00E900DA503F /* CargoView.swift in Sources */,
 				93024485255E00E900DA503F /* ButtonView.swift in Sources */,
+				93D49EB02623A27D0082B346 /* P-3Wnb.xcdatamodeld in Sources */,
+				931FCB462623A4A8009871F5 /* Persistence.swift in Sources */,
 				93024479255E00E900DA503F /* LRTPositionWeightView.swift in Sources */,
 				9302447C255E00E900DA503F /* AEWView.swift in Sources */,
 				9302447F255E00E900DA503F /* HorizontalInputView.swift in Sources */,
@@ -429,6 +437,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		93D49EAE2623A27D0082B346 /* P-3Wnb.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				93D49EAF2623A27D0082B346 /* P-3Wnb.xcdatamodel */,
+			);
+			currentVersion = 93D49EAF2623A27D0082B346 /* P-3Wnb.xcdatamodel */;
+			path = "P-3Wnb.xcdatamodeld";
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 9302443B255E002B00DA503F /* Project object */;
 }

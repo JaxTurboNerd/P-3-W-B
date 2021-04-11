@@ -10,6 +10,7 @@ import SwiftUI
 
 struct ButtonView: View {
     @EnvironmentObject private var aircraftData: AircraftData
+    @Environment(\.managedObjectContext) private var viewContext
     @State private var showAlert = false
     
     var body: some View {
@@ -43,6 +44,23 @@ struct ButtonView: View {
             }
             
         }//end VStack
+    }
+    
+    private func saveWeight(){
+        let newWeight = SavedWeight(context: viewContext)
+        newWeight.date = Date()
+        newWeight.aircraft = aircraftData.selectedAircraft
+        newWeight.cg = aircraftData.cg
+        newWeight.grossWeight = aircraftData.grossWeight
+        newWeight.zfw = aircraftData.ZFW
+        
+        do {
+            try viewContext.save()
+        }catch {
+            let error = error as NSError
+            fatalError("Unresolved error: \(error)")
+        }
+        
     }
 }
 
