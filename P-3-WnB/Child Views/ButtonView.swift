@@ -29,7 +29,7 @@ struct ButtonView: View {
                            .foregroundColor(.red)
                 Spacer()
                 Button(action: {
-                    aircraftData.saveWeights()
+                    saveWeight()
                     self.showAlert.toggle()
                 }) {
                     Text("Save")

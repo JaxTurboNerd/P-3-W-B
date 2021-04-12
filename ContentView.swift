@@ -9,12 +9,9 @@
 import SwiftUI
 
 struct ContentView: View {
-    @EnvironmentObject private var aircraftData: AircraftData
-    //@Environment(\.managedObjectContext) private var viewContext
+//    @EnvironmentObject private var aircraftData: AircraftData
+//    @Environment(\.managedObjectContext) private var viewContext
     @State private var selected = 0
-    
-    @FetchRequest(sortDescriptors: [])//won't need here?
-    private var weights: FetchedResults<SavedWeight>//won't need here?
     
     var body: some View {
         

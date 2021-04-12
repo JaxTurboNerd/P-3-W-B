@@ -40,10 +40,10 @@
 		93024452255E002D00DA503F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		93024454255E002D00DA503F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9302445C255E00CF00DA503F /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = SOURCE_ROOT; };
-		9302445D255E00CF00DA503F /* NumberTextfield.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NumberTextfield.swift; sourceTree = SOURCE_ROOT; };
+		9302445D255E00CF00DA503F /* NumberTextfield.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NumberTextfield.swift; path = "P-3-WnB/Custom Files/NumberTextfield.swift"; sourceTree = SOURCE_ROOT; };
 		9302445E255E00CF00DA503F /* weightViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = weightViewModel.swift; sourceTree = SOURCE_ROOT; };
 		9302445F255E00CF00DA503F /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = SOURCE_ROOT; };
-		93024460255E00CF00DA503F /* CustomPickerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomPickerView.swift; sourceTree = SOURCE_ROOT; };
+		93024460255E00CF00DA503F /* CustomPickerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CustomPickerView.swift; path = "P-3-WnB/Custom Files/CustomPickerView.swift"; sourceTree = SOURCE_ROOT; };
 		93024461255E00CF00DA503F /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = SOURCE_ROOT; };
 		9302446A255E00E900DA503F /* LRTView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LRTView.swift; sourceTree = "<group>"; };
 		9302446B255E00E900DA503F /* LRTPositionWeightView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LRTPositionWeightView.swift; sourceTree = "<group>"; };
@@ -92,19 +92,18 @@
 		93024445255E002B00DA503F /* P-3-WnB */ = {
 			isa = PBXGroup;
 			children = (
+				931FCB492623B6DA009871F5 /* Custom Files */,
+				93024469255E00E900DA503F /* Child Views */,
 				93024461255E00CF00DA503F /* AppDelegate.swift */,
 				9302445F255E00CF00DA503F /* SceneDelegate.swift */,
 				9302445E255E00CF00DA503F /* weightViewModel.swift */,
-				93024469255E00E900DA503F /* Child Views */,
-				93024460255E00CF00DA503F /* CustomPickerView.swift */,
-				9302445D255E00CF00DA503F /* NumberTextfield.swift */,
+				93D49EAE2623A27D0082B346 /* P-3Wnb.xcdatamodeld */,
 				9302445C255E00CF00DA503F /* ContentView.swift */,
+				931FCB452623A4A8009871F5 /* Persistence.swift */,
 				9302444C255E002D00DA503F /* Assets.xcassets */,
 				93024451255E002D00DA503F /* LaunchScreen.storyboard */,
 				93024454255E002D00DA503F /* Info.plist */,
 				9302444E255E002D00DA503F /* Preview Content */,
-				93D49EAE2623A27D0082B346 /* P-3Wnb.xcdatamodeld */,
-				931FCB452623A4A8009871F5 /* Persistence.swift */,
 			);
 			path = "P-3-WnB";
 			sourceTree = "<group>";
@@ -134,8 +133,18 @@
 				93024476255E00E900DA503F /* MiscView.swift */,
 				93024477255E00E900DA503F /* ButtonView.swift */,
 			);
-			path = "Child Views";
+			name = "Child Views";
+			path = "P-3-WnB/Child Views";
 			sourceTree = SOURCE_ROOT;
+		};
+		931FCB492623B6DA009871F5 /* Custom Files */ = {
+			isa = PBXGroup;
+			children = (
+				93024460255E00CF00DA503F /* CustomPickerView.swift */,
+				9302445D255E00CF00DA503F /* NumberTextfield.swift */,
+			);
+			path = "Custom Files";
+			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 

@@ -163,7 +163,7 @@ final class AircraftData: ObservableObject {
     }
     @Published var firstClassSeats = 0 {
         didSet {
-            if firstClassSeats > 500 && oldValue <= 500{
+            if firstClassSeats > 1000 && oldValue <= 1000{
                 firstClassSeats = oldValue
             }
         }
