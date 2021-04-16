@@ -10,6 +10,8 @@ import SwiftUI
 
 struct ButtonView: View {
     @EnvironmentObject private var aircraftData: AircraftData
+    
+    //Core Data setup:
     @Environment(\.managedObjectContext) private var viewContext
     @State private var showAlert = false
     
@@ -41,8 +43,7 @@ struct ButtonView: View {
                     Alert(title: Text("Saved Data"), message: Text("Aircraft data saved!"), dismissButton: .default(Text("OK")))
                 }
                 Spacer()
-            }
-            
+            }//end HStack
         }//end VStack
     }
     
@@ -59,9 +60,8 @@ struct ButtonView: View {
         }catch {
             let error = error as NSError
             fatalError("Unresolved error: \(error)")
-        }
-        
-    }
+        }//end try-catch
+    }//end saveWeight function
 }
 
 struct ButtonView_Previews: PreviewProvider {

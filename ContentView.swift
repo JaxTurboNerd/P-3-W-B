@@ -9,8 +9,6 @@
 import SwiftUI
 
 struct ContentView: View {
-//    @EnvironmentObject private var aircraftData: AircraftData
-//    @Environment(\.managedObjectContext) private var viewContext
     @State private var selected = 0
     
     var body: some View {

@@ -20,6 +20,7 @@ final class AircraftData: ObservableObject {
     @Published var showSavedAlert = false
     @Published var generatorInstalled = true
     
+    
     //Generator:
     private var generator: Int {
         if(generatorInstalled){

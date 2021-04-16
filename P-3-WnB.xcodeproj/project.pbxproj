@@ -92,14 +92,13 @@
 		93024445255E002B00DA503F /* P-3-WnB */ = {
 			isa = PBXGroup;
 			children = (
+				931782E12628B2D8003A0412 /* Core Data */,
 				931FCB492623B6DA009871F5 /* Custom Files */,
 				93024469255E00E900DA503F /* Child Views */,
 				93024461255E00CF00DA503F /* AppDelegate.swift */,
 				9302445F255E00CF00DA503F /* SceneDelegate.swift */,
 				9302445E255E00CF00DA503F /* weightViewModel.swift */,
-				93D49EAE2623A27D0082B346 /* P-3Wnb.xcdatamodeld */,
 				9302445C255E00CF00DA503F /* ContentView.swift */,
-				931FCB452623A4A8009871F5 /* Persistence.swift */,
 				9302444C255E002D00DA503F /* Assets.xcassets */,
 				93024451255E002D00DA503F /* LaunchScreen.storyboard */,
 				93024454255E002D00DA503F /* Info.plist */,
@@ -136,6 +135,15 @@
 			name = "Child Views";
 			path = "P-3-WnB/Child Views";
 			sourceTree = SOURCE_ROOT;
+		};
+		931782E12628B2D8003A0412 /* Core Data */ = {
+			isa = PBXGroup;
+			children = (
+				931FCB452623A4A8009871F5 /* Persistence.swift */,
+				93D49EAE2623A27D0082B346 /* P-3Wnb.xcdatamodeld */,
+			);
+			path = "Core Data";
+			sourceTree = "<group>";
 		};
 		931FCB492623B6DA009871F5 /* Custom Files */ = {
 			isa = PBXGroup;
