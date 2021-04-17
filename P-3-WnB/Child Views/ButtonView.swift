@@ -13,33 +13,42 @@ struct ButtonView: View {
     
     //Core Data setup:
     @Environment(\.managedObjectContext) private var viewContext
-    @State private var showAlert = false
+    @State private var showSaveAlert = false
+    @State private var showDeleteAlert = false
     
     var body: some View {
         VStack {
             HStack{
                 Spacer()
                 Button(action: {
-                    aircraftData.resetFuelWeights()
-                    aircraftData.resetCargoWeights()
-                    aircraftData.resetPositionWeights()
+                    self.showDeleteAlert.toggle()
                 }) {
-                               Text("Reset")
-                           }
-                           .padding()
-                           .background(RoundedRectangle(cornerRadius: 10).stroke(Color.red, lineWidth: 2))
-                           .foregroundColor(.red)
+                    Text("Reset")
+                }
+                .padding()
+                .background(RoundedRectangle(cornerRadius: 10).stroke(Color.red, lineWidth: 2))
+                .foregroundColor(.red)
+                .alert(isPresented: $showDeleteAlert, content: {
+                    Alert(title: Text("Delete"), message: Text("Are you sure you want to delete ALL values?"),
+                          primaryButton: .default(Text("OK")){
+                            aircraftData.resetFuelWeights()
+                            aircraftData.resetCargoWeights()
+                            aircraftData.resetPositionWeights()
+                          },
+                          secondaryButton: .cancel())
+                    
+                })
                 Spacer()
                 Button(action: {
                     saveWeight()
-                    self.showAlert.toggle()
+                    self.showSaveAlert.toggle()
                 }) {
                     Text("Save")
                 }
                 .padding()
                 .background(RoundedRectangle(cornerRadius: 10).stroke(Color.black, lineWidth: 2))
                 .foregroundColor(.black)
-                .alert(isPresented: $showAlert) {
+                .alert(isPresented: $showSaveAlert) {
                     Alert(title: Text("Saved Data"), message: Text("Aircraft data saved!"), dismissButton: .default(Text("OK")))
                 }
                 Spacer()

@@ -20,5 +20,15 @@ struct PersistenceController {
                 fatalError("Unresolved error: \(error.localizedDescription)")
             }
         }
+    }//end init()
+    
+    func deleteProfile(profile: SavedWeight) {
+        container.viewContext.delete(profile)
+        do {
+            try container.viewContext.save()
+        }catch {
+            container.viewContext.rollback()
+            print("Failed to delete \(error.localizedDescription)")
+        }
     }
-}
+}//end struct

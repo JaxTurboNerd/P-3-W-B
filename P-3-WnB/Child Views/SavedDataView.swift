@@ -9,12 +9,15 @@
 import SwiftUI
 
 struct SavedDataView: View {
+    @State private var showEditAlert = false
+    @State private var showDeleteAlert = false
+    
     //Core Data setup:
     @Environment(\.managedObjectContext) private var viewContext
     @FetchRequest(sortDescriptors:
-        [NSSortDescriptor(keyPath: \SavedWeight.date, ascending: true),
-        NSSortDescriptor(keyPath: \SavedWeight.aircraft, ascending: true)
-        ])
+                    [NSSortDescriptor(keyPath: \SavedWeight.date, ascending: true),
+                     NSSortDescriptor(keyPath: \SavedWeight.aircraft, ascending: true)
+                    ])
     var weights: FetchedResults<SavedWeight>
     
     var dateFormatter: DateFormatter {
@@ -25,30 +28,62 @@ struct SavedDataView: View {
     }
     
     var body: some View {
-        List {
-            ForEach(weights) {weight in
-                HStack{
-                    Spacer()
-                    Text(dateFormatter.string(from: weight.date!))
-                    Divider()
-                    Text(weight.aircraft ?? "Not Saved")
-                    Divider()
-                    Text(weight.grossWeight ?? "Not Saved")
-                    Divider()
-                    Text(weight.cg ?? "Not Saved")
-                    Button(action: {
-                        
-                    }, label: {
-                        Text("Edit")
-                    })
-                    Spacer()
-                }
-                .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
-                .border(/*@START_MENU_TOKEN@*/Color.black/*@END_MENU_TOKEN@*/, width: 2)
-                .frame(width: 700, height: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
-            }//end for each
-            .onDelete(perform: deleteWeight)
-        }//end List
+        
+        VStack {
+            HStack(spacing: 20) {
+                EditButton()
+                    .font(.title2)
+                Text("Saved Profiles")
+                    .font(.title)
+            }
+            List {
+                ForEach(weights) {weight in
+                    HStack{
+                        Text(dateFormatter.string(from: weight.date!))
+                        Divider()
+                        Text(weight.aircraft ?? "")
+                        Divider()
+                        Text("Gross Weight: \(weight.grossWeight ?? "")")
+                            .frame(width: 150, height: 80, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+                            //.fixedSize(horizontal: false, vertical: true)
+                            .lineLimit(nil)
+                            .border(/*@START_MENU_TOKEN@*/Color.black/*@END_MENU_TOKEN@*/, width: /*@START_MENU_TOKEN@*/1/*@END_MENU_TOKEN@*/)
+                        Divider()
+                        Text(" CG: \(weight.cg ?? "")")
+                            .frame(width: 75, height: 80, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+                            .border(/*@START_MENU_TOKEN@*/Color.black/*@END_MENU_TOKEN@*/, width: /*@START_MENU_TOKEN@*/1/*@END_MENU_TOKEN@*/)
+                        Spacer()
+                        Group {
+                            HStack {
+                                Spacer()
+                                Button(action: {
+                                    self.showEditAlert.toggle()
+                                }, label: {
+                                    Text("Edit")
+                                })
+                                .padding()
+                                .overlay(RoundedRectangle(cornerRadius: 6.0)
+                                            .stroke(Color.yellow, lineWidth: 3))
+                                .alert(isPresented: $showEditAlert, content: {
+                                    Alert(title: Text("Edit"), message: Text("Are you sure you want to EDIT this profile?"),
+                                          primaryButton: .default(Text("OK")){
+                                            //action to perform here
+                                          },
+                                          secondaryButton: .cancel())
+                                })
+                            }//end HStack
+                        }//end Group
+                    }//end HStack
+                    .padding()
+                    .font(.title3)
+                    .border(/*@START_MENU_TOKEN@*/Color.black/*@END_MENU_TOKEN@*/, width: 2)
+                    .frame(width: 700, height: 110, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+                }//end for each
+                .onDelete(perform: deleteWeight)
+                
+            }//end List
+        }//end VStack
+        .padding()
     }//end view
     
     private func saveContext(){
@@ -58,13 +93,14 @@ struct SavedDataView: View {
             let error = error as NSError
             fatalError("Unresolved Error: \(error)")
         }
-    }
+    }//end saveContent
+    
     private func deleteWeight(offsets: IndexSet) {
         withAnimation {
             offsets.map { weights[$0]}.forEach(viewContext.delete)
             saveContext()
         }
-    }
+    }//end deleteWeight
 }//end struct
 
 struct SavedDataView_Previews: PreviewProvider {
