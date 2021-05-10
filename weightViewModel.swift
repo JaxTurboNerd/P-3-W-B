@@ -19,7 +19,7 @@ final class AircraftData: ObservableObject {
     @Published var aircraftMoment = 39000.0
     @Published var showSavedAlert = false
     @Published var generatorInstalled = true
-    @Published var missionType = "" //for the mission type picker view?
+    @Published var missionType = "Other"
     
     //Generator:
     private var generator: Int {

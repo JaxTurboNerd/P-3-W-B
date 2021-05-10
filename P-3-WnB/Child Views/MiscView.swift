@@ -10,13 +10,41 @@ import SwiftUI
 
 struct MiscView: View {
     @EnvironmentObject private var aircraftData:AircraftData
+    
+    //Picker view setup:
+    //@State private var pickerSelection: String = "Mission"
+    let missionTypes:[String] = ["Mission", "Transit", "Training", "Other"]
+    
     var body: some View {
         VStack{
             HStack {
                 Spacer()
-                
+                Picker(selection: $aircraftData.missionType,
+                       label:
+                        HStack {
+                            Text("Mission Type:")
+                            Text(aircraftData.missionType)
+                        }
+                        .font(.subheadline)
+                        .foregroundColor(Color.white)
+                        .padding()
+                        .padding(.horizontal)
+                        .background(Color.blue.opacity(0.8))
+                        .cornerRadius(10)
+                        .shadow(color: Color.blue.opacity(0.3),
+                                radius: 10, x: 0, y: 10)
+                       ,
+                       content: {
+                        ForEach(missionTypes, id: \.self, content: {option in
+                            Text(option)
+                                .tag(option).font(.headline)
+                                
+                        })
+                })
+                    .pickerStyle(MenuPickerStyle())
                 Spacer()
             }//end HStack
+            .padding()
             ButtonView()
             Spacer()
         }//end VStack
