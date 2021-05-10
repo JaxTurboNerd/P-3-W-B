@@ -14,20 +14,13 @@ struct MiscView: View {
         VStack{
             HStack {
                 Spacer()
-                Toggle(isOn: $aircraftData.generatorInstalled) {
-                    Text("#1 Generator")
-                        .font(.title2)
-                }.frame(width: 190, height: 90, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
-                .padding(.horizontal)
-                .border(/*@START_MENU_TOKEN@*/Color.black/*@END_MENU_TOKEN@*/, width: 1)
+                
                 Spacer()
-                VertInputView(label: "Bomb Bay:", maxWeight: 2000, weight: $aircraftData.bombBay)
-                    .padding(.vertical)
-                Spacer()
-            }
-        ButtonView()
-        Spacer()
+            }//end HStack
+            ButtonView()
+            Spacer()
         }//end VStack
+        .padding()
     }//end some View
 }//end struct
 

@@ -20,7 +20,7 @@ struct SavedDataView: View {
                     ])
     var weights: FetchedResults<SavedWeight>
     
-    var dateFormatter: DateFormatter {
+    private var dateFormatter: DateFormatter {
         let formatter = DateFormatter()
         formatter.dateStyle = .medium
         formatter.timeStyle = .none
@@ -29,14 +29,11 @@ struct SavedDataView: View {
     
     var body: some View {
         
-        VStack {
-            HStack(spacing: 20) {
-                EditButton()
-                    .font(.title2)
-                Text("Saved Profiles")
-                    .font(.title)
-            }
-            List {
+        List {
+            Section(header:
+                        EditButton().frame(maxWidth: .infinity, alignment: .leading)
+                        .font(.title2)
+                        .overlay(Text("Saved Profiles").font(.title2), alignment: .center).padding()) {
                 ForEach(weights) {weight in
                     HStack{
                         Text(dateFormatter.string(from: weight.date!))
@@ -59,7 +56,7 @@ struct SavedDataView: View {
                                 Button(action: {
                                     self.showEditAlert.toggle()
                                 }, label: {
-                                    Text("Edit")
+                                    Text("Use")
                                 })
                                 .padding()
                                 .overlay(RoundedRectangle(cornerRadius: 6.0)
@@ -80,10 +77,10 @@ struct SavedDataView: View {
                     .frame(width: 700, height: 110, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
                 }//end for each
                 .onDelete(perform: deleteWeight)
-                
-            }//end List
-        }//end VStack
-        .padding()
+            }
+            
+        }//end List
+        .listStyle(InsetGroupedListStyle())
     }//end view
     
     private func saveContext(){

@@ -5,9 +5,10 @@
         <attribute name="cg" optional="YES" attributeType="String"/>
         <attribute name="date" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
         <attribute name="grossWeight" optional="YES" attributeType="String"/>
+        <attribute name="missionType" optional="YES" attributeType="String"/>
         <attribute name="zfw" optional="YES" attributeType="String"/>
     </entity>
     <elements>
-        <element name="SavedWeight" positionX="-63" positionY="-18" width="128" height="104"/>
+        <element name="SavedWeight" positionX="-63" positionY="-18" width="128" height="119"/>
     </elements>
 </model>
