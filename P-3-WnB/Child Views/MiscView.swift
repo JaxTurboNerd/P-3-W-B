@@ -22,7 +22,7 @@ struct MiscView: View {
                 Picker(selection: $aircraftData.missionType,
                        label:
                         HStack {
-                            Text("Mission Type:")
+                            Text("Flight Profile:")
                             Text(aircraftData.missionType)
                         }
                         .font(.subheadline)

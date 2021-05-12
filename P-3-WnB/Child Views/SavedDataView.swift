@@ -29,7 +29,7 @@ struct SavedDataView: View {
     
     var body: some View {
         
-        List {
+        List{
             Section(header:
                         EditButton().frame(maxWidth: .infinity, alignment: .leading)
                         .font(.title2)
@@ -57,27 +57,28 @@ struct SavedDataView: View {
                                 .lineLimit(nil)
                         }
                         
-                        Group {
-                            HStack {
-                                Divider()
-                                Button(action: {
-                                    self.showEditAlert.toggle()
-                                }, label: {
-                                    Text("Use")
-                                })
-                                .padding()
-                                .overlay(RoundedRectangle(cornerRadius: 6.0)
-                                            .stroke(Color.yellow, lineWidth: 3))
-                                .alert(isPresented: $showEditAlert, content: {
-                                    Alert(title: Text("Edit"),
-                                          message: Text("Are you sure you want to EDIT this profile?"),
-                                          primaryButton: .default(Text("OK")){
-                                            //action to perform here
-                                          },
-                                          secondaryButton: .cancel())
-                                })
-                            }//end HStack
-                        }//end Group
+                        //                        Group {
+                        //                            HStack {
+                        //                                Divider()
+                        //                                Button(action: {
+                        //                                    self.showEditAlert.toggle()
+                        //                                }, label: {
+                        //                                    Text("Use")
+                        //                                })
+                        //                                .padding()
+                        //                                .overlay(RoundedRectangle(cornerRadius: 6.0)
+                        //                                            .stroke(Color.yellow, lineWidth: 3))
+                        //                                .alert(isPresented: $showEditAlert, content: {
+                        //                                    Alert(title: Text("Edit"),
+                        //                                          message: Text("Are you sure you want to EDIT this profile?"),
+                        //                                          primaryButton: .default(Text("OK")){
+                        //                                            //action to perform here
+                        //
+                        //                                          },
+                        //                                          secondaryButton: .cancel())
+                        //                                })
+                        //                            }//end HStack
+                        //                        }//end Group
                     }//end HStack
                     .padding()
                     .font(.title3)
@@ -110,6 +111,6 @@ struct SavedDataView: View {
 
 struct SavedDataView_Previews: PreviewProvider {
     static var previews: some View {
-        SavedDataView()
+        SavedDataView().environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
     }
 }

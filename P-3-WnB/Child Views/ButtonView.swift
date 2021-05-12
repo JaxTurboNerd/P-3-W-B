@@ -68,6 +68,12 @@ struct ButtonView: View {
     private func saveWeight(){
         let newWeight = SavedWeight(context: viewContext)
         newWeight.date = Date()
+        
+        //check for empty selected aircraft:
+        guard aircraftData.selectedAircraft != "" else {
+            newWeight.aircraft = "NXXXSK"
+            return
+        }
         newWeight.aircraft = aircraftData.selectedAircraft
         newWeight.cg = aircraftData.cg
         newWeight.grossWeight = aircraftData.grossWeight

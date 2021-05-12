@@ -27,14 +27,19 @@ struct CargoView: View {
             VStack {
                 VertInputView(label: "Bomb Bay:", maxWeight: 2000, weight: $aircraftData.bombBay)
                     .padding()
-                VStack {
-                    Text(aircraftData.generatorInstalled ? "#1 Gen Installed": "1 Gen NOT Installed")
-                    Toggle("Gen",isOn: $aircraftData.generatorInstalled).labelsHidden()
-                }//end VStack
-                .padding()
-                .border(Color.gray, width: 1)
-                .shadow(color: .gray.opacity(0.3), radius: 4, y: 4)
-            }
+                Text(aircraftData.generatorInstalled ? "#1 Generator Installed": " #1 Generator NOT Installed")
+                    .onTapGesture {
+                        aircraftData.generatorInstalled.toggle()
+                    }
+                    .frame(width: 120, height: 38, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+                    .font(.subheadline)
+                    .foregroundColor(Color.black)
+                    .padding()
+                    .background(aircraftData.generatorInstalled ? Color.green.opacity(0.8): Color.yellow.opacity(0.8))
+                    .cornerRadius(10)
+                    .shadow(color: Color.gray.opacity(0.3),
+                            radius: 10, x: 0, y: 10)
+            }//end VStack
             .padding()
         }//end HStack
     }
