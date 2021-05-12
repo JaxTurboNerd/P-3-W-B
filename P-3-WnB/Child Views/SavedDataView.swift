@@ -9,9 +9,7 @@
 import SwiftUI
 
 struct SavedDataView: View {
-    @State private var showEditAlert = false
-    @State private var showDeleteAlert = false
-    
+
     //Core Data setup:
     @Environment(\.managedObjectContext) private var viewContext
     @FetchRequest(sortDescriptors:
@@ -55,30 +53,7 @@ struct SavedDataView: View {
                                 .frame(width: 80, height: 80, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
                                 .border(Color.black, width: 1)
                                 .lineLimit(nil)
-                        }
-                        
-                        //                        Group {
-                        //                            HStack {
-                        //                                Divider()
-                        //                                Button(action: {
-                        //                                    self.showEditAlert.toggle()
-                        //                                }, label: {
-                        //                                    Text("Use")
-                        //                                })
-                        //                                .padding()
-                        //                                .overlay(RoundedRectangle(cornerRadius: 6.0)
-                        //                                            .stroke(Color.yellow, lineWidth: 3))
-                        //                                .alert(isPresented: $showEditAlert, content: {
-                        //                                    Alert(title: Text("Edit"),
-                        //                                          message: Text("Are you sure you want to EDIT this profile?"),
-                        //                                          primaryButton: .default(Text("OK")){
-                        //                                            //action to perform here
-                        //
-                        //                                          },
-                        //                                          secondaryButton: .cancel())
-                        //                                })
-                        //                            }//end HStack
-                        //                        }//end Group
+                        }//end Group
                     }//end HStack
                     .padding()
                     .font(.title3)
