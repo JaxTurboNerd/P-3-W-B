@@ -45,14 +45,20 @@ struct SavedDataView: View {
                                 .lineLimit(nil)
                                 .border(/*@START_MENU_TOKEN@*/Color.black/*@END_MENU_TOKEN@*/, width: /*@START_MENU_TOKEN@*/1/*@END_MENU_TOKEN@*/)
                             Divider()
-                            Text(" CG: \(weight.cg ?? "")")
-                                .frame(width: 75, height: 80, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
-                                .border(/*@START_MENU_TOKEN@*/Color.black/*@END_MENU_TOKEN@*/, width: /*@START_MENU_TOKEN@*/1/*@END_MENU_TOKEN@*/)
-                            Divider()
-                            Text("Profile: \(weight.missionType ?? "N/A")")
-                                .frame(width: 80, height: 80, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
-                                .border(Color.black, width: 1)
-                                .lineLimit(nil)
+                            Group {
+                                Text(" CG: \(weight.cg ?? "")")
+                                    .frame(width: 75, height: 80, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+                                    .border(/*@START_MENU_TOKEN@*/Color.black/*@END_MENU_TOKEN@*/, width: /*@START_MENU_TOKEN@*/1/*@END_MENU_TOKEN@*/)
+                                Divider()
+                                Text(" ZFW: \(weight.zfw ?? "")")
+                                    .frame(width: 75, height: 80, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+                                    .border(/*@START_MENU_TOKEN@*/Color.black/*@END_MENU_TOKEN@*/, width: /*@START_MENU_TOKEN@*/1/*@END_MENU_TOKEN@*/)
+                                Divider()
+                                Text("Profile: \(weight.missionType ?? "N/A")")
+                                    .frame(width: 80, height: 80, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+                                    .border(Color.black, width: 1)
+                                    .lineLimit(nil)
+                            }//end Group
                         }//end Group
                     }//end HStack
                     .padding()
