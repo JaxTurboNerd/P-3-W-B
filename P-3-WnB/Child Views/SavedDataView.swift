@@ -89,9 +89,3 @@ struct SavedDataView: View {
         }
     }//end deleteWeight
 }//end struct
-
-struct SavedDataView_Previews: PreviewProvider {
-    static var previews: some View {
-        SavedDataView().environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
-    }
-}
