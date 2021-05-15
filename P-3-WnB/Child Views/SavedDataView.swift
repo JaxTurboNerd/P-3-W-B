@@ -18,12 +18,12 @@ struct SavedDataView: View {
                     ])
     var weights: FetchedResults<SavedWeight>
     
-    private var dateFormatter: DateFormatter {
+    private let dateFormatter: DateFormatter = {
         let formatter = DateFormatter()
         formatter.dateStyle = .medium
         formatter.timeStyle = .none
         return formatter
-    }
+    }()
     
     var body: some View {
         
@@ -35,7 +35,7 @@ struct SavedDataView: View {
                 ForEach(weights) {weight in
                     HStack{
                         Group {
-                            Text(dateFormatter.string(from: weight.date!))
+                            Text(weight.date!, formatter: self.dateFormatter)
                             Divider()
                             Text(weight.aircraft ?? "")
                             Divider()

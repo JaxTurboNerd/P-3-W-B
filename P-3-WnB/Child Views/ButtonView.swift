@@ -66,6 +66,10 @@ struct ButtonView: View {
     }//end body
     
     private func saveWeight(){
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateStyle = .medium
+        dateFormatter.timeStyle = .none
+        
         let newWeight = SavedWeight(context: viewContext)
         newWeight.date = Date()
         
