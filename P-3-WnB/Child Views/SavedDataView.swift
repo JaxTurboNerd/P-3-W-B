@@ -36,27 +36,28 @@ struct SavedDataView: View {
                     HStack{
                         Group {
                             Text(weight.date!, formatter: self.dateFormatter)
+                                .frame(width: 150, height: 80, alignment: .center)
                             Divider()
                             Text(weight.aircraft ?? "")
+                                .frame(width: 90, height: 80, alignment: .center)
                             Divider()
                             Text("Gross Weight: \(weight.grossWeight ?? "")")
                                 .frame(width: 150, height: 80, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
-                                //.fixedSize(horizontal: false, vertical: true)
                                 .lineLimit(nil)
-                                .border(/*@START_MENU_TOKEN@*/Color.black/*@END_MENU_TOKEN@*/, width: /*@START_MENU_TOKEN@*/1/*@END_MENU_TOKEN@*/)
+                                //.border(/*@START_MENU_TOKEN@*/Color.black/*@END_MENU_TOKEN@*/, width: /*@START_MENU_TOKEN@*/1/*@END_MENU_TOKEN@*/)
                             Divider()
                             Group {
                                 Text(" CG: \(weight.cg ?? "")")
                                     .frame(width: 75, height: 80, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
-                                    .border(/*@START_MENU_TOKEN@*/Color.black/*@END_MENU_TOKEN@*/, width: /*@START_MENU_TOKEN@*/1/*@END_MENU_TOKEN@*/)
+                                    //.border(/*@START_MENU_TOKEN@*/Color.black/*@END_MENU_TOKEN@*/, width: /*@START_MENU_TOKEN@*/1/*@END_MENU_TOKEN@*/)
                                 Divider()
                                 Text(" ZFW: \(weight.zfw ?? "")")
                                     .frame(width: 75, height: 80, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
-                                    .border(/*@START_MENU_TOKEN@*/Color.black/*@END_MENU_TOKEN@*/, width: /*@START_MENU_TOKEN@*/1/*@END_MENU_TOKEN@*/)
+                                    //.border(/*@START_MENU_TOKEN@*/Color.black/*@END_MENU_TOKEN@*/, width: /*@START_MENU_TOKEN@*/1/*@END_MENU_TOKEN@*/)
                                 Divider()
                                 Text("Profile: \(weight.missionType ?? "N/A")")
                                     .frame(width: 80, height: 80, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
-                                    .border(Color.black, width: 1)
+                                    //.border(Color.black, width: 1)
                                     .lineLimit(nil)
                             }//end Group
                         }//end Group

@@ -409,21 +409,6 @@ final class AircraftData: ObservableObject {
         self.stbAftObs = 0
     }//end func
     
-//    func saveWeights() {
-//        //Define date information:
-//        let currentDate = Date()
-//        let dateFormatter = DateFormatter()
-//        dateFormatter.dateFormat = "MM/dd/yyyy"
-//        self.savedDate = dateFormatter.string(from: currentDate)
-//
-//        //Set User Default values:
-//        UserDefaults.standard.set(self.selectedAircraft, forKey: "selectedAircraft")
-//        UserDefaults.standard.set(self.grossWeight, forKey: "grossWeight")
-//        UserDefaults.standard.set(self.cg, forKey: "cg")
-//        UserDefaults.standard.set(self.basicWeight, forKey: "basicWeight")
-//        UserDefaults.standard.set(self.ZFW, forKey: "zfw")
-//        UserDefaults.standard.set(self.savedDate, forKey: "savedDate")
-//    }//end func setWeights
 }//end class
 
 

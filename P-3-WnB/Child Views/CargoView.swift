@@ -31,7 +31,7 @@ struct CargoView: View {
                     .onTapGesture {
                         aircraftData.generatorInstalled.toggle()
                     }
-                    .frame(width: 120, height: 40, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+                    .frame(width: 120, height: 45, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
                     .font(.subheadline)
                     .foregroundColor(Color.black)
                     .padding()
@@ -42,6 +42,7 @@ struct CargoView: View {
             }//end VStack
             .padding()
         }//end HStack
+        .padding()
     }
 }
 

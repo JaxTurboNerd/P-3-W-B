@@ -78,7 +78,7 @@ struct CustomPickerView: View {
                 }//end VStack
                 .background(Color(UIColor.secondarySystemBackground))
                 .cornerRadius(10)
-                .frame(width: 300, height: 350)
+                .frame(width: 200, height: 300)
                 .padding(.horizontal, 10)
                 .padding(.top, 20)
                 Spacer()

@@ -61,6 +61,7 @@ struct LRTPositionWeightView: View {
                 }//end VStack
                 Spacer()
             }//end VStack
+            .padding(.horizontal)
             if aircraftData.presentPicker {
                 CustomPickerView(aircraftList: aircraft.sorted(), basicWeights: LRTbasicWeights, aircraftMoments: LRTMoments, presentPicker: $aircraftData.presentPicker, selectedAircraft: $aircraftData.selectedAircraft, basicWeight: $aircraftData.basicWeight, aircraftMoment: $aircraftData.aircraftMoment)
             }

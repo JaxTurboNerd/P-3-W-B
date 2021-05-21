@@ -25,6 +25,7 @@ struct FuelView: View {
                 .padding(.vertical, 10.0)//end HStack
             VertInputView(label: "Tank 5:", maxWeight: 17900, weight: $aircraftData.tank5)
         }//end VStack
+        .padding()
     }//end some View
 }//end struct
 
