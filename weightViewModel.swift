@@ -20,14 +20,9 @@ final class AircraftData: ObservableObject {
     @Published var showSavedAlert = false
     @Published var generatorInstalled = true
     @Published var missionType = "Other"
+    @Published var aircraftViewMismatch = false
+    @Published var viewSelected = 0
     
-    //Generator:
-    private var generator: Int {
-        if(generatorInstalled){
-            return 108
-        }
-        else {return 0}
-    }
     
     //Fuel
     @Published var tank1 = 0 {
@@ -245,6 +240,31 @@ final class AircraftData: ObservableObject {
     var grossWeight: String {
         String(Int(ZFW)! + totalFuel)
     }
+    
+    var isOverWeight: Bool {
+        if (aircraftIsLRT && (Int(grossWeight)! > 127500)) {
+            return true
+        }else if (!aircraftIsLRT && (Int(grossWeight)! > 135000)){
+            return true
+        }else {return false}
+    }
+    
+    var zfwExceeded: Bool {
+        if (aircraftIsLRT && (Int(ZFW)! > 70000)) {
+            return true
+        }else if (!aircraftIsLRT && (Int(ZFW)! > 77100)){
+            return true
+        } else {return false}
+    }
+    
+    //Generator:
+    private var generator: Int {
+        if(generatorInstalled){
+            return 108
+        }
+        else {return 0}
+    }
+    
     var totalFuel:Int {
         tank1 + tank2 + tank3 + tank4 + tank5
     }

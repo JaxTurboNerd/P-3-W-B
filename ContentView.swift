@@ -9,11 +9,12 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State private var selected = 0
+    @EnvironmentObject private var aircraftData: AircraftData
+    //@State private var selected = 0
     
     var body: some View {
         
-        TabView(selection: $selected){
+        TabView(selection: $aircraftData.viewSelected){
             LRTView().tabItem({
                 Image(systemName: "airplane")
                 Text("LRT")

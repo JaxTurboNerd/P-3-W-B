@@ -34,7 +34,6 @@ struct LRTPositionWeightView: View {
                     .fontWeight(.medium)
                     .frame(width: 200, height: 55)
                     .background(aircraftData.aircraftIsLRT ? Color.green: Color.red).opacity(0.6)
-                    //.border(Color.black, width: 3)
                     .cornerRadius(10)
                     .onTapGesture {
                         self.aircraftData.presentPicker = true

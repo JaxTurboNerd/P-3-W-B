@@ -46,10 +46,10 @@ struct CustomPickerView: View {
                             Button(action: {
                                 //code when user taps on the aircraft
                                 self.aircraftData.selectedAircraft = item
+                                
                                 //code to set selectedLRT/AEW variables:
                                 switch item {
                                 case "N144CS", "N145CS", "N146CS", "N147CS", "N149CS":
-                                    //next line used for setting the background color as error alert
                                     self.aircraftData.aircraftIsLRT = false
                                 case "N403SK", "N480SK", "N741SK":
                                     self.aircraftData.aircraftIsLRT = true

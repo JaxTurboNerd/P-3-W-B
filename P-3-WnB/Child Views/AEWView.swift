@@ -9,6 +9,8 @@
 import SwiftUI
 
 struct AEWView: View {
+    @EnvironmentObject private var aircraftData: AircraftData
+    
     var body: some View {
         ScrollView {
             VStack {

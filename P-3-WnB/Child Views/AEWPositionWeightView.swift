@@ -35,12 +35,12 @@ struct AEWPositionWeightView: View {
                     .font(.title2)
                     .fontWeight(.medium)
                     .frame(width: 200, height: 55)
-                    .background(!aircraftData.alertTrigger ? Color.red:aircraftData.aircraftIsLRT ? Color.red: Color.green).opacity(0.6)
-                    //.border(Color.black, width: 3)
+                    .background(!aircraftData.alertTrigger ? Color.red: aircraftData.aircraftIsLRT ? Color.red: Color.green).opacity(0.6)
                     .cornerRadius(10)
                     .onTapGesture {
-                        self.aircraftData.presentPicker = true
                         self.aircraftData.aircraftIsLRT = false
+                        self.aircraftData.presentPicker = true
+                        self.aircraftData.alertTrigger = false
                 }
                 Spacer()
                 
