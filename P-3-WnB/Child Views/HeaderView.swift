@@ -19,7 +19,6 @@ struct HeaderView: View {
                 HeaderSubView(label: "Basic Weight", weight: aircraftData.basicWeight)
                 Spacer()
                 ZfwSubView(label: "ZFW", weight: aircraftData.ZFW)
-                //HeaderSubView(label: "ZFW", weight: aircraftData.ZFW)
                 Spacer()
                 GrossWeightSubView(label: "Gross Weight", weight: aircraftData.grossWeight)
                 Spacer()

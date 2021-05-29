@@ -9,14 +9,18 @@
 import SwiftUI
 
 struct ButtonView: View {
-    @EnvironmentObject private var aircraftData: AircraftData
+    @EnvironmentObject var aircraftData: AircraftData
     
     //Core Data connection setup:
-    @Environment(\.managedObjectContext) private var viewContext
+    @Environment(\.managedObjectContext) var viewContext
     
+    //variables for the alerts;
+    enum ActiveAlert {
+        case error, save
+    }
+    @State private var showAlert = false
+    @State private var activeAlert: ActiveAlert = .save
     @State private var showResetAlert = false
-    @State private var showSavedAlert = false
-    @State private var mismatchAlert = false
     
     var body: some View {
         VStack {
@@ -41,17 +45,19 @@ struct ButtonView: View {
                             aircraftData.resetPositionWeights()
                         },
                         secondaryButton: .cancel())
-                    
                 })
                 Spacer()
                 Button(action: {
                     determineViewMismatch()
                     if self.aircraftData.aircraftViewMismatch {
-                        self.mismatchAlert.toggle()
+                        //self.mismatchAlert.toggle()
+                        self.activeAlert = .error
                     }else {
                         saveWeight()
-                        self.showSavedAlert.toggle()
+                        //self.showSavedAlert.toggle()
+                        self.activeAlert = .save
                     }//end if-else
+                    self.showAlert.toggle()
                 }) {
                     Text("Save")
                 }
@@ -59,65 +65,26 @@ struct ButtonView: View {
                 .padding(.horizontal)
                 .background(RoundedRectangle(cornerRadius: 10).stroke(Color.black, lineWidth: 2))
                 .foregroundColor(.black)
-                .alert(isPresented: $showSavedAlert) {
-                    Alert(title: Text("Saved Data"),
-                          message: Text("Aircraft data saved!"),
-                          
-                          dismissButton: .default(Text("OK")))
-                }//end alert
-                .alert(isPresented: $mismatchAlert) {
-                    Alert(title: Text("Incorrect Aircraft Selection"),
-                          message: Text("Please select the appropriate aircraft type (LRT/AEW)"),
-                          
-                          dismissButton: .default(Text("OK")))
+                .alert(isPresented: $showAlert) {
+                    switch activeAlert {
+                    case .error:
+                        return Alert(title: Text("Incorrect Aircraft Selection"),message: Text("Please select the opposite aircraft type (LRT/AEW)"), dismissButton: .default(Text("OK")))
+            
+                    case .save:
+                        return Alert(title: Text("Saved Data"), message: Text("Aircraft data saved"), dismissButton: .default(Text("OK")))
+                    }//end switch
                 }//end alert
                 Spacer()
             }//end HStack
         }//end VStack
         .padding(.bottom)
     }//end body
-    
-    private func saveWeight(){
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateStyle = .medium
-        dateFormatter.timeStyle = .none
-        
-        let newWeight = SavedWeight(context: viewContext)
-        newWeight.date = Date()
-        
-        //check for empty selected aircraft:
-        guard aircraftData.selectedAircraft != "" else {
-            newWeight.aircraft = "NXXXSK"
-            return
-        }
-        newWeight.aircraft = aircraftData.selectedAircraft
-        newWeight.cg = aircraftData.cg
-        newWeight.grossWeight = aircraftData.grossWeight
-        newWeight.zfw = aircraftData.ZFW
-        newWeight.missionType = aircraftData.missionType
-        
-        do {
-            try viewContext.save()
-        }catch {
-            let error = error as NSError
-            fatalError("Unresolved error: \(error.localizedDescription)")
-        }//end try-catch
-    }//end saveWeight function
-    
-    //This function determines if the user has an LRT selected while on the AEW view and tries to save the existing data...or vice versa (AEW selected while on the LRT View
-    private func determineViewMismatch(){
-        //On the LRT tab with an AEW aircraft selected:
-        if (self.aircraftData.viewSelected == 0 && !self.aircraftData.aircraftIsLRT){
-            self.aircraftData.aircraftViewMismatch = true
-        } else if
-            //On the AEW tab with an LRT aircraft selected:
-            (self.aircraftData.viewSelected == 1 && self.aircraftData.aircraftIsLRT){
-            self.aircraftData.aircraftViewMismatch = true
-        } else {
-            self.aircraftData.aircraftViewMismatch = false
-        }
-    }//end func
 }//end struct
+
+/*
+ The functions used to save and to determine if there is a view mis-match are contained in the
+ SaveFunctions extension file
+ */
 
 
 struct ButtonView_Previews: PreviewProvider {

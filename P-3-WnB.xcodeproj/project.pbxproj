@@ -30,6 +30,9 @@
 		93024484255E00E900DA503F /* MiscView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93024476255E00E900DA503F /* MiscView.swift */; };
 		93024485255E00E900DA503F /* ButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93024477255E00E900DA503F /* ButtonView.swift */; };
 		931FCB462623A4A8009871F5 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 931FCB452623A4A8009871F5 /* Persistence.swift */; };
+		9332EEF5266155B6008D0DF8 /* WeightExceeded.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9332EEF4266155B6008D0DF8 /* WeightExceeded.swift */; };
+		9332EEF7266159D0008D0DF8 /* CGsubView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9332EEF6266159D0008D0DF8 /* CGsubView.swift */; };
+		9332EEFA2661BE12008D0DF8 /* SaveFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9332EEF92661BE12008D0DF8 /* SaveFunctions.swift */; };
 		93667E012660710B0088D7D5 /* GrossWeightSubView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93667E002660710B0088D7D5 /* GrossWeightSubView.swift */; };
 		93667E03266079A40088D7D5 /* ZfwSubView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93667E02266079A40088D7D5 /* ZfwSubView.swift */; };
 		93D49EB02623A27D0082B346 /* P-3Wnb.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 93D49EAE2623A27D0082B346 /* P-3Wnb.xcdatamodeld */; };
@@ -61,6 +64,9 @@
 		93024476255E00E900DA503F /* MiscView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MiscView.swift; sourceTree = "<group>"; };
 		93024477255E00E900DA503F /* ButtonView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonView.swift; sourceTree = "<group>"; };
 		931FCB452623A4A8009871F5 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
+		9332EEF4266155B6008D0DF8 /* WeightExceeded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeightExceeded.swift; sourceTree = "<group>"; };
+		9332EEF6266159D0008D0DF8 /* CGsubView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGsubView.swift; sourceTree = "<group>"; };
+		9332EEF92661BE12008D0DF8 /* SaveFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveFunctions.swift; sourceTree = "<group>"; };
 		93667E002660710B0088D7D5 /* GrossWeightSubView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GrossWeightSubView.swift; sourceTree = "<group>"; };
 		93667E02266079A40088D7D5 /* ZfwSubView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZfwSubView.swift; sourceTree = "<group>"; };
 		93D49EAF2623A27D0082B346 /* P-3Wnb.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "P-3Wnb.xcdatamodel"; sourceTree = "<group>"; };
@@ -96,6 +102,7 @@
 		93024445255E002B00DA503F /* P-3-WnB */ = {
 			isa = PBXGroup;
 			children = (
+				9332EEF82661BDAC008D0DF8 /* Extensions */,
 				931782E12628B2D8003A0412 /* Core Data */,
 				931FCB492623B6DA009871F5 /* Custom Files */,
 				93024469255E00E900DA503F /* Child Views */,
@@ -137,6 +144,7 @@
 				93024477255E00E900DA503F /* ButtonView.swift */,
 				93667E002660710B0088D7D5 /* GrossWeightSubView.swift */,
 				93667E02266079A40088D7D5 /* ZfwSubView.swift */,
+				9332EEF6266159D0008D0DF8 /* CGsubView.swift */,
 			);
 			name = "Child Views";
 			path = "P-3-WnB/Child Views";
@@ -158,6 +166,15 @@
 				9302445D255E00CF00DA503F /* NumberTextfield.swift */,
 			);
 			path = "Custom Files";
+			sourceTree = "<group>";
+		};
+		9332EEF82661BDAC008D0DF8 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				9332EEF4266155B6008D0DF8 /* WeightExceeded.swift */,
+				9332EEF92661BE12008D0DF8 /* SaveFunctions.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -238,6 +255,7 @@
 				93024481255E00E900DA503F /* CargoView.swift in Sources */,
 				93024485255E00E900DA503F /* ButtonView.swift in Sources */,
 				93667E012660710B0088D7D5 /* GrossWeightSubView.swift in Sources */,
+				9332EEF7266159D0008D0DF8 /* CGsubView.swift in Sources */,
 				93D49EB02623A27D0082B346 /* P-3Wnb.xcdatamodeld in Sources */,
 				931FCB462623A4A8009871F5 /* Persistence.swift in Sources */,
 				93024479255E00E900DA503F /* LRTPositionWeightView.swift in Sources */,
@@ -256,7 +274,9 @@
 				9302447D255E00E900DA503F /* VertInputView.swift in Sources */,
 				93667E03266079A40088D7D5 /* ZfwSubView.swift in Sources */,
 				93024465255E00CF00DA503F /* SceneDelegate.swift in Sources */,
+				9332EEFA2661BE12008D0DF8 /* SaveFunctions.swift in Sources */,
 				93024480255E00E900DA503F /* HeaderSubView.swift in Sources */,
+				9332EEF5266155B6008D0DF8 /* WeightExceeded.swift in Sources */,
 				9302447E255E00E900DA503F /* HeaderView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
