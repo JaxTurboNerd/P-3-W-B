@@ -46,10 +46,10 @@
 		93024454255E002D00DA503F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9302445C255E00CF00DA503F /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = SOURCE_ROOT; };
 		9302445D255E00CF00DA503F /* NumberTextfield.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NumberTextfield.swift; path = "P-3-WnB/Custom Files/NumberTextfield.swift"; sourceTree = SOURCE_ROOT; };
-		9302445E255E00CF00DA503F /* weightViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = weightViewModel.swift; sourceTree = SOURCE_ROOT; };
-		9302445F255E00CF00DA503F /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = SOURCE_ROOT; };
+		9302445E255E00CF00DA503F /* weightViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = weightViewModel.swift; path = "P-3-WnB/Models/weightViewModel.swift"; sourceTree = SOURCE_ROOT; };
+		9302445F255E00CF00DA503F /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SceneDelegate.swift; path = "P-3-WnB/Delegates/SceneDelegate.swift"; sourceTree = SOURCE_ROOT; };
 		93024460255E00CF00DA503F /* CustomPickerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CustomPickerView.swift; path = "P-3-WnB/Custom Files/CustomPickerView.swift"; sourceTree = SOURCE_ROOT; };
-		93024461255E00CF00DA503F /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = SOURCE_ROOT; };
+		93024461255E00CF00DA503F /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = "P-3-WnB/Delegates/AppDelegate.swift"; sourceTree = SOURCE_ROOT; };
 		9302446A255E00E900DA503F /* LRTView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LRTView.swift; sourceTree = "<group>"; };
 		9302446B255E00E900DA503F /* LRTPositionWeightView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LRTPositionWeightView.swift; sourceTree = "<group>"; };
 		9302446D255E00E900DA503F /* FuelView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FuelView.swift; sourceTree = "<group>"; };
@@ -102,13 +102,12 @@
 		93024445255E002B00DA503F /* P-3-WnB */ = {
 			isa = PBXGroup;
 			children = (
+				9332EEFC2661BFFC008D0DF8 /* Delegates */,
+				9332EEFB2661BFE8008D0DF8 /* Models */,
 				9332EEF82661BDAC008D0DF8 /* Extensions */,
 				931782E12628B2D8003A0412 /* Core Data */,
 				931FCB492623B6DA009871F5 /* Custom Files */,
 				93024469255E00E900DA503F /* Child Views */,
-				93024461255E00CF00DA503F /* AppDelegate.swift */,
-				9302445F255E00CF00DA503F /* SceneDelegate.swift */,
-				9302445E255E00CF00DA503F /* weightViewModel.swift */,
 				9302445C255E00CF00DA503F /* ContentView.swift */,
 				9302444C255E002D00DA503F /* Assets.xcassets */,
 				93024451255E002D00DA503F /* LaunchScreen.storyboard */,
@@ -175,6 +174,23 @@
 				9332EEF92661BE12008D0DF8 /* SaveFunctions.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		9332EEFB2661BFE8008D0DF8 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				9302445E255E00CF00DA503F /* weightViewModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		9332EEFC2661BFFC008D0DF8 /* Delegates */ = {
+			isa = PBXGroup;
+			children = (
+				9302445F255E00CF00DA503F /* SceneDelegate.swift */,
+				93024461255E00CF00DA503F /* AppDelegate.swift */,
+			);
+			path = Delegates;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

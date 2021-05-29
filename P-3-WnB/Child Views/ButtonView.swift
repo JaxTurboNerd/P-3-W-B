@@ -50,11 +50,9 @@ struct ButtonView: View {
                 Button(action: {
                     determineViewMismatch()
                     if self.aircraftData.aircraftViewMismatch {
-                        //self.mismatchAlert.toggle()
                         self.activeAlert = .error
                     }else {
                         saveWeight()
-                        //self.showSavedAlert.toggle()
                         self.activeAlert = .save
                     }//end if-else
                     self.showAlert.toggle()

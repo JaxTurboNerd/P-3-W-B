@@ -22,7 +22,7 @@ struct HeaderView: View {
                 Spacer()
                 GrossWeightSubView(label: "Gross Weight", weight: aircraftData.grossWeight)
                 Spacer()
-                HeaderSubView(label: "C.G.", weight: String(aircraftData.cg))
+                CGsubView(label: "C.G.", weight: String(aircraftData.cg))
                 Spacer()
             }//end HStack
         }//end VStack
