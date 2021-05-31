@@ -11,16 +11,6 @@ import SwiftUI
 struct LRTPositionWeightView: View {
     @EnvironmentObject private var aircraftData: AircraftData
     
-    //Picker:
-    @State private var aircraft = ["N403SK", "N480SK", "N741SK"]
-    
-    @State private var LRTbasicWeights = ["N403SK": "63915",
-                                          "N480SK": "66414",
-                                          "N741SK": "64692"]
-    @State private var LRTMoments = ["N403SK": 36747.8,
-                                     "N480SK": 38398.6,
-                                     "N741SK": 37311.6]
-    
     var body: some View {
         ZStack {
             VStack{
@@ -62,7 +52,7 @@ struct LRTPositionWeightView: View {
             }//end VStack
             .padding(.horizontal)
             if aircraftData.presentPicker {
-                CustomPickerView(aircraftList: aircraft.sorted(), basicWeights: LRTbasicWeights, aircraftMoments: LRTMoments, presentPicker: $aircraftData.presentPicker, selectedAircraft: $aircraftData.selectedAircraft, basicWeight: $aircraftData.basicWeight, aircraftMoment: $aircraftData.aircraftMoment)
+                CustomPickerView(aircraftList: LRTPositionWeightView.aircraft.sorted(), basicWeights: LRTPositionWeightView.LRTbasicWeights, aircraftMoments: LRTPositionWeightView.LRTMoments, presentPicker: $aircraftData.presentPicker, selectedAircraft: $aircraftData.selectedAircraft, basicWeight: $aircraftData.basicWeight, aircraftMoment: $aircraftData.aircraftMoment)
             }
         }//end ZStack
     }//end some View

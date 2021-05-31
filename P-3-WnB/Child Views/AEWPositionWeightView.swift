@@ -10,17 +10,7 @@ import SwiftUI
 
 struct AEWPositionWeightView: View {
     @EnvironmentObject private var aircraftData: AircraftData
-    //Picker:
-    @State private var aircraft = ["N144CS", "N145CS", "N146CS", "N149CS"]
-    
-    @State private var AEWbasicWeights = ["N144CS": "71932",
-                                          "N145CS": "71927",
-                                          "N146CS": "72179",
-                                          "N149CS": "72510"]
-    @State private var AEWMoments = ["N144CS": 42256.7,
-                                     "N145CS": 42212.1,
-                                     "N146CS": 42232.4,
-                                     "N149CS": 42482.1]
+
     var body: some View {
         ZStack {
             VStack {
@@ -64,7 +54,7 @@ struct AEWPositionWeightView: View {
                 Spacer()
             }//end VStack
             if aircraftData.presentPicker {
-                CustomPickerView(aircraftList: aircraft.sorted(), basicWeights: AEWbasicWeights, aircraftMoments: AEWMoments, presentPicker: $aircraftData.presentPicker, selectedAircraft: $aircraftData.selectedAircraft, basicWeight: $aircraftData.basicWeight, aircraftMoment: $aircraftData.aircraftMoment)
+                CustomPickerView(aircraftList: AEWPositionWeightView.aircraft.sorted(), basicWeights: AEWPositionWeightView.AEWbasicWeights, aircraftMoments: AEWPositionWeightView.AEWMoments, presentPicker: $aircraftData.presentPicker, selectedAircraft: $aircraftData.selectedAircraft, basicWeight: $aircraftData.basicWeight, aircraftMoment: $aircraftData.aircraftMoment)
             }
         }//end ZStack
     }//end some View
