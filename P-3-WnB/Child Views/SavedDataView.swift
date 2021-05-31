@@ -12,12 +12,15 @@ struct SavedDataView: View {
 
     //Core Data setup:
     @Environment(\.managedObjectContext) private var viewContext
+    
+    //Core data fetch results sorted by date then aircraft:
     @FetchRequest(sortDescriptors:
                     [NSSortDescriptor(keyPath: \SavedWeight.date, ascending: true),
                      NSSortDescriptor(keyPath: \SavedWeight.aircraft, ascending: true)
                     ])
     var weights: FetchedResults<SavedWeight>
-    
+
+    //Format the displayed date:
     private let dateFormatter: DateFormatter = {
         let formatter = DateFormatter()
         formatter.dateStyle = .medium
