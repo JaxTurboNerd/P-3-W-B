@@ -28,21 +28,21 @@ final class AircraftData: ObservableObject {
     @Published var tank1 = 0 {
         //if user input exceeds 10900 -> set to the max of 10900
         didSet {
-            if tank1 > 10900 && oldValue <= 10900{
+            if tank1 > 11000 && oldValue <= 11000{
                 tank1 = oldValue
             }
         }
     }
     @Published var tank2 = 0 {
         didSet {
-            if tank2 > 11300 && oldValue <= 11300{
+            if tank2 > 11500 && oldValue <= 11500{
                 tank2 = oldValue
             }
         }
     }
     @Published var tank3 = 0 {
         didSet {
-            if tank3 > 11300 && oldValue <= 11300{
+            if tank3 > 11500 && oldValue <= 11500{
                 tank3 = oldValue
             }
         }
@@ -50,7 +50,7 @@ final class AircraftData: ObservableObject {
     
     @Published var tank4 = 0 {
         didSet {
-            if tank4 > 10900 && oldValue <= 10900{
+            if tank4 > 11000 && oldValue <= 11000{
                 tank4 = oldValue
             }
         }

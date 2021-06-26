@@ -24,6 +24,8 @@ extension ButtonView {
         newWeight.grossWeight = aircraftData.grossWeight
         newWeight.zfw = aircraftData.ZFW
         newWeight.missionType = aircraftData.missionType
+        //provide unique identifier for each saved instance.  To be used for retrieval by the UUID?
+        newWeight.id = UUID()
         
         do {
             try viewContext.save()

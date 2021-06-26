@@ -9,20 +9,25 @@ import Foundation
 import Combine
 
 extension AircraftData {
+    
     var isOverWeight: Bool {
-        if (aircraftIsLRT && (Int(grossWeight)! > 127500)) {
+        if (selectedAircraft == "N741SK" && (Int(grossWeight)! > 127500)) {
             return true
-        }else if (!aircraftIsLRT && (Int(grossWeight)! > 135000)){
+        }else if ((selectedAircraft == "N403SK" || selectedAircraft == "N480SK") && (Int(grossWeight)! > 135000)){
+            return true
+        }else if (!aircraftIsLRT && (Int(grossWeight)! > 135000)) {
             return true
         }else {return false}
     }
     
     var zfwExceeded: Bool {
-        if (aircraftIsLRT && (Int(ZFW)! > 71584)) {
+        if (selectedAircraft == "N741SK" && (Int(grossWeight)! > 71584)) {
             return true
-        }else if (!aircraftIsLRT && (Int(ZFW)! > 77200)){
+        }else if ((selectedAircraft == "N403SK" || selectedAircraft == "N480SK") && (Int(grossWeight)! > 77200)){
             return true
-        } else {return false}
+        }else if (!aircraftIsLRT && (Int(grossWeight)! > 77200)) {
+            return true
+        }else {return false}
     }
     
     var cgExceeded: Bool {
