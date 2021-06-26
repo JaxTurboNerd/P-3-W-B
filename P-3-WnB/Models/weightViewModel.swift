@@ -22,7 +22,7 @@ final class AircraftData: ObservableObject {
     @Published var missionType = "Other"
     @Published var aircraftViewMismatch = false
     @Published var viewSelected = 0
-    
+    @Published var screenJustLoaded = true
     
     //Fuel
     @Published var tank1 = 0 {
@@ -364,13 +364,15 @@ final class AircraftData: ObservableObject {
     
     var cg: String {
         get {
-            if !alertTrigger {
+            //This is so CG will show 0 when the app first starts.
+            if screenJustLoaded {
                 return "0"
             }
             else {
-                return String((((((totalMoment/Double(grossWeight)!) - leadingEdgeMAC)/MAC) * 1000.0).rounded())/10.0) // rounded to xx.x format
+                return String((((((totalMoment/Double(grossWeight)!) - leadingEdgeMAC)/MAC) * 1000.0).rounded())/10.0)
+                // rounded to xx.x format
             }
-        }
+        }//end get
     }//end cg
 }//end class
 

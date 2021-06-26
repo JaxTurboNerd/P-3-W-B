@@ -70,6 +70,7 @@ struct CustomPickerView: View {
                                     self.aircraftData.presentPicker = false
                                 }
                                 self.aircraftData.alertTrigger = true
+                                self.aircraftData.screenJustLoaded = false
                             }){
                                 Text(item)
                             }

@@ -131,10 +131,10 @@
 			isa = PBXGroup;
 			children = (
 				9302446A255E00E900DA503F /* LRTView.swift */,
+				9302446E255E00E900DA503F /* AEWView.swift */,
 				9302446B255E00E900DA503F /* LRTPositionWeightView.swift */,
 				93024474255E00E900DA503F /* AEWPositionWeightView.swift */,
 				9302446D255E00E900DA503F /* FuelView.swift */,
-				9302446E255E00E900DA503F /* AEWView.swift */,
 				9302446F255E00E900DA503F /* VertInputView.swift */,
 				93024470255E00E900DA503F /* HeaderView.swift */,
 				93024471255E00E900DA503F /* HorizontalInputView.swift */,

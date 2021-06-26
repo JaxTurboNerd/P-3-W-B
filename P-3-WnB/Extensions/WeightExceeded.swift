@@ -21,20 +21,23 @@ extension AircraftData {
     }
     
     var zfwExceeded: Bool {
-        if (selectedAircraft == "N741SK" && (Int(grossWeight)! > 71584)) {
+        if (selectedAircraft == "N741SK" && (Int(ZFW)! > 71584)) {
             return true
-        }else if ((selectedAircraft == "N403SK" || selectedAircraft == "N480SK") && (Int(grossWeight)! > 77200)){
+        }else if ((selectedAircraft == "N403SK" || selectedAircraft == "N480SK") && (Int(ZFW)! > 77200)){
             return true
-        }else if (!aircraftIsLRT && (Int(grossWeight)! > 77200)) {
+        }else if (!aircraftIsLRT && (Int(ZFW)! > 77200)) {
             return true
         }else {return false}
     }
     
     var cgExceeded: Bool {
-        if (Double(cg)! > 29.0) {
+        //Heavy weight aircraft have a different CG graph -> different aft limits
+        if (!aircraftIsLRT && ((Double(cg)!) > 30.0)){
             return true
-        }
-        
-        return false
+        }else if ((selectedAircraft == "N403SK" || selectedAircraft == "N480SK") && ((Double(cg)!) > 30.0)){
+            return true
+        }else if (aircraftIsLRT && (Double(cg)! > 29.5)){
+            return true
+        }else {return false}
     }
 }
