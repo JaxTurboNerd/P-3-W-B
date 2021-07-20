@@ -9,6 +9,7 @@ import SwiftUI
 
 struct CGsubView: View {
     @EnvironmentObject private var aircraftData: AircraftData
+    @Environment(\.colorScheme) private var colorScheme
     var label:String
     var weight:String
     
@@ -33,7 +34,7 @@ struct CGsubView: View {
             Text("\(weight)")
                 .frame(width: 90.0)
                 .multilineTextAlignment(.center)
-                .foregroundColor(aircraftData.cgExceeded ? .orange : .black)
+                .foregroundColor(colorScheme == .dark ? Color.white : aircraftData.zfwExceeded ? .orange : .black)
         }//end VStack
     }//end weightView
 }

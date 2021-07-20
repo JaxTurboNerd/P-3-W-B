@@ -33,7 +33,6 @@ struct CargoView: View {
                     }
                     .frame(width: 120, height: 45, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
                     .font(.subheadline)
-                    .foregroundColor(Color.black)
                     .padding()
                     .background(aircraftData.generatorInstalled ? Color.green.opacity(0.8): Color.yellow.opacity(0.8))
                     .cornerRadius(10)

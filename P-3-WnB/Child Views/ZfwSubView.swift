@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ZfwSubView: View {
     @EnvironmentObject private var aircraftData: AircraftData
+    @Environment(\.colorScheme) private var colorScheme
     var label:String
     var weight:String
     
@@ -33,7 +34,7 @@ struct ZfwSubView: View {
             Text("\(weight)")
                 .frame(width: 90.0)
                 .multilineTextAlignment(.center)
-                .foregroundColor(aircraftData.zfwExceeded ? .red : .black)
+                .foregroundColor(colorScheme == .dark ? Color.white : aircraftData.zfwExceeded ? .red : .black)
         }//end VStack
     }
 }

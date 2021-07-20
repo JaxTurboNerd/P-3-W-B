@@ -33,7 +33,7 @@ struct ButtonView: View {
                 }
                 .padding()
                 .padding(.horizontal)
-                .foregroundColor(.red)
+                //.foregroundColor(.red)
                 .background(RoundedRectangle(cornerRadius: 10).stroke(Color.red, lineWidth: 2))
                 .alert(isPresented: $showResetAlert, content: {
                     Alert(
@@ -61,8 +61,8 @@ struct ButtonView: View {
                 }
                 .padding()
                 .padding(.horizontal)
-                .background(RoundedRectangle(cornerRadius: 10).stroke(Color.black, lineWidth: 2))
-                .foregroundColor(.black)
+                .background(RoundedRectangle(cornerRadius: 10).stroke(Color.green, lineWidth: 2))
+                //.foregroundColor(.black)
                 .alert(isPresented: $showAlert) {
                     switch activeAlert {
                     case .error:
