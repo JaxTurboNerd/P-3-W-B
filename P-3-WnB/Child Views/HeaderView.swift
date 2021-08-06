@@ -16,7 +16,7 @@ struct HeaderView: View {
                 .font(.largeTitle)
             HStack{
                 Spacer()
-                HeaderSubView(label: "Basic Weight", weight: aircraftData.basicWeight)
+                HeaderSubView(label: "Basic Weight", weight: "\(aircraftData.basicWeight)")
                 Spacer()
                 ZfwSubView(label: "ZFW", weight: aircraftData.ZFW)
                 Spacer()

@@ -31,6 +31,7 @@ struct ContentView: View {
             }).tag(2)
         }//end Tab View
     }//end some View
+    
 }//end struct
 
 struct ContentView_Previews: PreviewProvider {

@@ -1,24 +1,15 @@
 //
-//  CustomPickerView.swift
-//  W&BSwiftUI
+//  AircraftListView.swift
+//  P-3-WnB
 //
-//  Created by Gregory Boyd on 8/26/20.
-//  Copyright © 2020 Gregory Boyd. All rights reserved.
+//  Created by Gregory Boyd on 7/20/21.
 //
 
 import SwiftUI
 
-struct CustomPickerView: View {
+struct AircraftListView: View {
     @EnvironmentObject private var aircraftData: AircraftData
-    
-    var aircraftList = [String]()
-    let basicWeights: [String:Int]
-    let aircraftMoments: [String:Double]
-    
-    @Binding var presentPicker: Bool
-    @Binding var selectedAircraft: String
-    @Binding var basicWeight: String
-    @Binding var aircraftMoment: Double
+    let aircraftList: [String]
     
     var body: some View {
         ZStack {
@@ -28,7 +19,7 @@ struct CustomPickerView: View {
                     HStack{
                         Button(action: {//Cancel button
                             withAnimation{
-                                self.aircraftData.presentPicker = false
+                                self.aircraftData.presentAircraftList = false
                             }
                         }){
                             Text("Cancel")
@@ -56,18 +47,8 @@ struct CustomPickerView: View {
                                 default:
                                     break
                                 }//end switch
-                                for (key, value) in self.basicWeights {
-                                    if self.aircraftData.selectedAircraft == key {
-                                        self.aircraftData.basicWeight = value
-                                    }
-                                }
-                                for (key, value) in self.aircraftMoments {
-                                    if self.aircraftData.selectedAircraft == key {
-                                        self.aircraftData.aircraftMoment = value
-                                    }
-                                }
                                 withAnimation {
-                                    self.aircraftData.presentPicker = false
+                                    self.aircraftData.presentAircraftList = false
                                 }
                                 self.aircraftData.alertTrigger = true
                                 self.aircraftData.screenJustLoaded = false
@@ -89,11 +70,9 @@ struct CustomPickerView: View {
     }
 }
 
-struct CustomPickerView_Previews: PreviewProvider {
+struct AircraftListView_Previews: PreviewProvider {
     static let sampleData = ["N403SK", "N480SK", "N741SK", "N769SK"]
-    static let sampleBasics = ["N403SK": 63914, "N480SK": 66413, "N741SK":64692, "N769SK":66000]
-    static let sampleMoments = ["N403SK": 39000.0, "N480SK": 38777.0, "N741SK": 37345.0, "N769SK": 38453.0]
     static var previews: some View {
-        CustomPickerView(aircraftList: sampleData, basicWeights: sampleBasics, aircraftMoments: sampleMoments, presentPicker: Binding.constant(true), selectedAircraft: Binding.constant("N741SK"), basicWeight: Binding.constant("66000"), aircraftMoment: Binding.constant(39000.0))
+        AircraftListView(aircraftList: sampleData)
     }
 }

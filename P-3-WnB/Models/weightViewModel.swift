@@ -12,7 +12,8 @@ import Foundation
 final class AircraftData: ObservableObject {
     @Published var selectedAircraft = ""
     @Published var presentPicker = false
-    @Published var basicWeight = "00000"
+    @Published var presentAircraftList = false;
+    @Published var basicWeight = 00000
     @Published var savedDate = "MMM dd YYYY"
     @Published var alertTrigger = false
     @Published var aircraftIsLRT = false
@@ -23,6 +24,7 @@ final class AircraftData: ObservableObject {
     @Published var aircraftViewMismatch = false
     @Published var viewSelected = 0
     @Published var screenJustLoaded = true
+    @Published var showLrtList = false
     
     //Fuel
     @Published var tank1 = 0 {
@@ -234,7 +236,7 @@ final class AircraftData: ObservableObject {
     
     //Computed Propeties:
     var ZFW: String {
-        String(Int(basicWeight)! + cargoWeight + positionWeights)
+        String(basicWeight + cargoWeight + positionWeights)
     }
     
     var grossWeight: String {

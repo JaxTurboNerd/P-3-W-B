@@ -9,12 +9,10 @@ import SwiftUI
 
 struct AircraftUserInfo: View {
     @EnvironmentObject private var aircraftData: AircraftData
+    @State private var moment = ""
+    private let lrtList = ["N403SK", "N480SK", "N741SK", "N769SK"]
+    private let aewList = ["N144CS", "N145CS", "N146CS", "N147CS", "N148CS",                            "N149CS"]
         
-    @Binding var presentPicker: Bool
-    @Binding var selectedAircraft: String
-    @Binding var basicWeight: Int
-    @Binding var aircraftMoment: Double
-    
     var body: some View {
         ZStack {
             Color.black.opacity(0.4)
@@ -31,6 +29,14 @@ struct AircraftUserInfo: View {
                         }//end Button
                         .padding(10)
                         Spacer()
+                        Button(action: {
+                            withAnimation {
+                                self.aircraftData.presentPicker = false
+                            }
+                        }, label: {
+                            Text("OK")
+                        })
+                        .padding(10)
                     }//end HStack
                         .background(Color(UIColor.darkGray))
                         .foregroundColor(Color.white)
@@ -39,12 +45,16 @@ struct AircraftUserInfo: View {
                         .padding(.leading,10)
                     List{
                         HStack {
-                            Text("Aircraft Number:")
-                                .multilineTextAlignment(.trailing)
-                                .frame(width: 160, height: 50)
-                                
+                            Button(action: {
+                                self.aircraftData.presentAircraftList = true
+                            }, label: {
+                                Text("Select Aircraft")
+                            })
+                            .padding(5)
+                            .background(RoundedRectangle(cornerRadius: 10).stroke(Color.orange))
+                            
                             Divider()
-                            TextField("Aircraft", text: $selectedAircraft)
+                            TextField("Aircraft", text: $aircraftData.selectedAircraft)
                                 .multilineTextAlignment(.center)
                         }
                         .font(.title2)
@@ -54,7 +64,7 @@ struct AircraftUserInfo: View {
                                 .frame(width: 160, height: 50)
                                 .multilineTextAlignment(.trailing)
                             Divider()
-                            NumberTextField(value: $basicWeight, maxValue: 75000)
+                            NumberTextField(value: $aircraftData.basicWeight, maxValue: 75000)
                         }
                         .font(.title2)
                         HStack {
@@ -62,18 +72,28 @@ struct AircraftUserInfo: View {
                                 .frame(width: 160, height: 50)
                                 .multilineTextAlignment(.trailing)
                             Divider()
-                            NumberTextField(value: $aircraftMoment, maxValue: 37000)
+                            DoubleTextField(value: $aircraftData.aircraftMoment, maxValue: 37000.0)
                         }
                         .font(.title2)
                     }
                 }//end VStack
                 .background(Color(UIColor.secondarySystemBackground))
                 .cornerRadius(10)
-                .frame(width: 400, height: 300)
+                .frame(width: 400, height: 280)
                 .padding(.horizontal, 10)
                 .padding(.top, 20)
                 Spacer()
             }//end VStack
+            .popover(isPresented: $aircraftData.presentAircraftList, attachmentAnchor: .point(.top), content: {
+                if aircraftData.showLrtList {
+                    AircraftListView(aircraftList: lrtList)
+                }else {
+                    AircraftListView(aircraftList: aewList)
+                }
+            })
+            if aircraftData.presentAircraftList {
+                
+            }
         }//end ZStack
         .edgesIgnoringSafeArea(.all)
     
@@ -83,6 +103,7 @@ struct AircraftUserInfo: View {
 struct AircraftUserInfo_Previews: PreviewProvider {
     
     static var previews: some View {
-        AircraftUserInfo(presentPicker: Binding.constant(true), selectedAircraft: Binding.constant("N741SK"), basicWeight: Binding.constant(65000), aircraftMoment: Binding.constant(37000.0))
+        let aircraftData = AircraftData()
+        return AircraftUserInfo().environmentObject(aircraftData)
     }
 }

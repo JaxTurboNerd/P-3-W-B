@@ -9,6 +9,7 @@
 import SwiftUI
 
 struct LRTView: View {
+    @EnvironmentObject private var aircraftData: AircraftData
     
     var body: some View {
         ScrollView {

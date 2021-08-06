@@ -27,7 +27,7 @@ struct LRTPositionWeightView: View {
                     .cornerRadius(10)
                     .onTapGesture {
                         self.aircraftData.presentPicker = true
-                        self.aircraftData.aircraftIsLRT = true
+                        self.aircraftData.showLrtList = true
                     }
                 
                 VStack(spacing: 10.0) {
@@ -51,9 +51,9 @@ struct LRTPositionWeightView: View {
                 Spacer()
             }//end VStack
             .padding(.horizontal)
-            if aircraftData.presentPicker {
-                CustomPickerView(aircraftList: LRTPositionWeightView.aircraft.sorted(), basicWeights: LRTPositionWeightView.LRTbasicWeights, aircraftMoments: LRTPositionWeightView.LRTMoments, presentPicker: $aircraftData.presentPicker, selectedAircraft: $aircraftData.selectedAircraft, basicWeight: $aircraftData.basicWeight, aircraftMoment: $aircraftData.aircraftMoment)
-            }
+            .popover(isPresented: $aircraftData.presentPicker, attachmentAnchor: .point(.center), arrowEdge: .top, content: {
+                AircraftUserInfo()
+            })
         }//end ZStack
     }//end some View
     

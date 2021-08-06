@@ -28,7 +28,7 @@ struct AEWPositionWeightView: View {
                     .background(!aircraftData.alertTrigger ? Color.red: aircraftData.aircraftIsLRT ? Color.red: Color.green).opacity(0.6)
                     .cornerRadius(10)
                     .onTapGesture {
-                        self.aircraftData.aircraftIsLRT = false
+                        self.aircraftData.showLrtList = false
                         self.aircraftData.presentPicker = true
                         self.aircraftData.alertTrigger = false
                 }
@@ -53,9 +53,9 @@ struct AEWPositionWeightView: View {
                 }//end VStack
                 Spacer()
             }//end VStack
-            if aircraftData.presentPicker {
-                CustomPickerView(aircraftList: AEWPositionWeightView.aircraft.sorted(), basicWeights: AEWPositionWeightView.AEWbasicWeights, aircraftMoments: AEWPositionWeightView.AEWMoments, presentPicker: $aircraftData.presentPicker, selectedAircraft: $aircraftData.selectedAircraft, basicWeight: $aircraftData.basicWeight, aircraftMoment: $aircraftData.aircraftMoment)
-            }
+            .popover(isPresented: $aircraftData.presentPicker, attachmentAnchor: .point(.center), arrowEdge: .top, content: {
+                AircraftUserInfo()
+            })
         }//end ZStack
     }//end some View
 }
