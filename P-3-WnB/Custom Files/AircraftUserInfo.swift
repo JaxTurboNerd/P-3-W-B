@@ -6,10 +6,11 @@
 //
 
 import SwiftUI
+import NumericText
 
 struct AircraftUserInfo: View {
     @EnvironmentObject private var aircraftData: AircraftData
-    @State private var moment = ""
+    @State private var moment: NSNumber?
     private let lrtList = ["N403SK", "N480SK", "N741SK", "N769SK"]
     private let aewList = ["N144CS", "N145CS", "N146CS", "N147CS", "N148CS",                            "N149CS"]
         
@@ -64,7 +65,7 @@ struct AircraftUserInfo: View {
                                 .frame(width: 160, height: 50)
                                 .multilineTextAlignment(.trailing)
                             Divider()
-                            NumberTextField(value: $aircraftData.basicWeight, maxValue: 75000)
+                            NumberTextField(value: $aircraftData.basicWeight, maxValue: 75000, maxChars: 5)
                         }
                         .font(.title2)
                         HStack {
@@ -72,7 +73,8 @@ struct AircraftUserInfo: View {
                                 .frame(width: 160, height: 50)
                                 .multilineTextAlignment(.trailing)
                             Divider()
-                            DoubleTextField(value: $aircraftData.aircraftMoment, maxValue: 37000.0)
+                            MomentTextField(value: $aircraftData.aircraftMoment, maxValue: 40000.03, maxChars: 6)
+//                            DoubleTextField(value: $aircraftData.aircraftMoment, maxValue: 39000.0, maxChars: 7)
                         }
                         .font(.title2)
                     }

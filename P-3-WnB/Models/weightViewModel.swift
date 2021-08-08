@@ -17,7 +17,7 @@ final class AircraftData: ObservableObject {
     @Published var savedDate = "MMM dd YYYY"
     @Published var alertTrigger = false
     @Published var aircraftIsLRT = false
-    @Published var aircraftMoment = 39000.0
+    @Published var aircraftMoment = 0.0
     @Published var showSavedAlert = false
     @Published var generatorInstalled = true
     @Published var missionType = "Other"

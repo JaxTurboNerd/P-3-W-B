@@ -16,14 +16,14 @@ struct FuelView: View {
                 .font(.title)
             HStack{
                 Spacer()
-                VertInputView(label: "Tank 1:", maxWeight: 10900, weight: $aircraftData.tank1)
-                VertInputView(label: "Tank 2:", maxWeight: 11300, weight: $aircraftData.tank2)
-                VertInputView(label: "Tank 3:", maxWeight: 11300, weight: $aircraftData.tank3)
-                VertInputView(label: "Tank 4:", maxWeight: 10900, weight: $aircraftData.tank4)
+                VertInputView(label: "Tank 1:", maxWeight: 10900, maxChars: 5, weight: $aircraftData.tank1)
+                VertInputView(label: "Tank 2:", maxWeight: 11300, maxChars: 5, weight: $aircraftData.tank2)
+                VertInputView(label: "Tank 3:", maxWeight: 11300, maxChars: 5, weight: $aircraftData.tank3)
+                VertInputView(label: "Tank 4:", maxWeight: 10900, maxChars: 5, weight: $aircraftData.tank4)
                 Spacer()
             }//end HStack
                 .padding(.vertical, 10.0)//end HStack
-            VertInputView(label: "Tank 5:", maxWeight: 17900, weight: $aircraftData.tank5)
+            VertInputView(label: "Tank 5:", maxWeight: 17900, maxChars: 5, weight: $aircraftData.tank5)
         }//end VStack
         .padding()
     }//end some View

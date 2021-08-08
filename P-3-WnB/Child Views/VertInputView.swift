@@ -11,6 +11,7 @@ import SwiftUI
 struct VertInputView: View {
     var label:String
     var maxWeight: Int
+    var maxChars: Int
     @Binding var weight: Int
     
     var body: some View {
@@ -31,7 +32,7 @@ struct VertInputView: View {
                 .lineLimit(2)
                 .fixedSize(horizontal: false, vertical: true)
             Divider()
-            NumberTextField(value: $weight, maxValue: maxWeight)
+            NumberTextField(value: $weight, maxValue: maxWeight, maxChars: maxChars)
                 .frame(width: 90, height: 35)
         }//end VStack
     }//end weightView
@@ -39,6 +40,6 @@ struct VertInputView: View {
 
 struct VertInputView_Previews: PreviewProvider {
     static var previews: some View {
-        VertInputView(label: "Fuel", maxWeight: 0, weight: Binding.constant(000))
+        VertInputView(label: "Fuel", maxWeight: 0, maxChars: 3, weight: Binding.constant(000))
     }
 }

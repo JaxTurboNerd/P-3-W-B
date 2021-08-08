@@ -16,16 +16,16 @@ struct CargoView: View {
             VStack{
                 Text("Cargo Area:")
                     .font(.title)
-                HorizontalInputView(label: "B:", maxWeight: 2000, weight: $aircraftData.cargoB)
-                HorizontalInputView(label: "C:", maxWeight: 2000, weight: $aircraftData.cargoC)
-                HorizontalInputView(label: "D:", maxWeight: 2000, weight: $aircraftData.cargoD)
-                HorizontalInputView(label: "E:", maxWeight: 2000, weight: $aircraftData.cargoE)
-                HorizontalInputView(label: "F:", maxWeight: 2000, weight: $aircraftData.cargoF)
-                HorizontalInputView(label: "G:", maxWeight: 2000, weight: $aircraftData.cargoG)
+                HorizontalInputView(label: "B:", maxWeight: 2000, maxChars: 4, weight: $aircraftData.cargoB)
+                HorizontalInputView(label: "C:", maxWeight: 2000, maxChars: 4, weight: $aircraftData.cargoC)
+                HorizontalInputView(label: "D:", maxWeight: 2000, maxChars: 4, weight: $aircraftData.cargoD)
+                HorizontalInputView(label: "E:", maxWeight: 2000, maxChars: 4, weight: $aircraftData.cargoE)
+                HorizontalInputView(label: "F:", maxWeight: 2000, maxChars: 4, weight: $aircraftData.cargoF)
+                HorizontalInputView(label: "G:", maxWeight: 2000, maxChars: 4, weight: $aircraftData.cargoG)
             }//end VStack
             Spacer()
             VStack {
-                VertInputView(label: "Bomb Bay:", maxWeight: 2000, weight: $aircraftData.bombBay)
+                VertInputView(label: "Bomb Bay:", maxWeight: 2000, maxChars: 4, weight: $aircraftData.bombBay)
                     .padding()
                 Text(aircraftData.generatorInstalled ? "#1 Generator Installed": " #1 Generator NOT Installed")
                     .onTapGesture {

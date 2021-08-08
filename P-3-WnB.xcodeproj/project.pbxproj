@@ -38,8 +38,9 @@
 		93667E03266079A40088D7D5 /* ZfwSubView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93667E02266079A40088D7D5 /* ZfwSubView.swift */; };
 		93736B8326BDDD3600CF1244 /* NumericText in Frameworks */ = {isa = PBXBuildFile; productRef = 93736B8226BDDD3600CF1244 /* NumericText */; };
 		93AFD15A26A6493500F660E3 /* AircraftUserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93AFD15926A6493500F660E3 /* AircraftUserInfo.swift */; };
-		93AFD15C26A77F8A00F660E3 /* DoubleTextfield.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93AFD15B26A77F8A00F660E3 /* DoubleTextfield.swift */; };
 		93AFD15E26A799D700F660E3 /* AircraftListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93AFD15D26A799D700F660E3 /* AircraftListView.swift */; };
+		93C1780D26C07B9B006CA69B /* BasicWeightTxtField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C1780C26C07B9B006CA69B /* BasicWeightTxtField.swift */; };
+		93C1780F26C0808C006CA69B /* MomentTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C1780E26C0808C006CA69B /* MomentTextField.swift */; };
 		93D49EB02623A27D0082B346 /* P-3Wnb.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 93D49EAE2623A27D0082B346 /* P-3Wnb.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
@@ -76,8 +77,9 @@
 		93667E002660710B0088D7D5 /* GrossWeightSubView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GrossWeightSubView.swift; sourceTree = "<group>"; };
 		93667E02266079A40088D7D5 /* ZfwSubView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZfwSubView.swift; sourceTree = "<group>"; };
 		93AFD15926A6493500F660E3 /* AircraftUserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AircraftUserInfo.swift; sourceTree = "<group>"; };
-		93AFD15B26A77F8A00F660E3 /* DoubleTextfield.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoubleTextfield.swift; sourceTree = "<group>"; };
 		93AFD15D26A799D700F660E3 /* AircraftListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AircraftListView.swift; sourceTree = "<group>"; };
+		93C1780C26C07B9B006CA69B /* BasicWeightTxtField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicWeightTxtField.swift; sourceTree = "<group>"; };
+		93C1780E26C0808C006CA69B /* MomentTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MomentTextField.swift; sourceTree = "<group>"; };
 		93D49EAF2623A27D0082B346 /* P-3Wnb.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "P-3Wnb.xcdatamodel"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -174,8 +176,9 @@
 				93024460255E00CF00DA503F /* CustomPickerView.swift */,
 				9302445D255E00CF00DA503F /* NumberTextfield.swift */,
 				93AFD15926A6493500F660E3 /* AircraftUserInfo.swift */,
-				93AFD15B26A77F8A00F660E3 /* DoubleTextfield.swift */,
 				93AFD15D26A799D700F660E3 /* AircraftListView.swift */,
+				93C1780C26C07B9B006CA69B /* BasicWeightTxtField.swift */,
+				93C1780E26C0808C006CA69B /* MomentTextField.swift */,
 			);
 			path = "Custom Files";
 			sourceTree = "<group>";
@@ -285,6 +288,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				93024481255E00E900DA503F /* CargoView.swift in Sources */,
+				93C1780D26C07B9B006CA69B /* BasicWeightTxtField.swift in Sources */,
 				93024485255E00E900DA503F /* ButtonView.swift in Sources */,
 				93667E012660710B0088D7D5 /* GrossWeightSubView.swift in Sources */,
 				9332EEF7266159D0008D0DF8 /* CGsubView.swift in Sources */,
@@ -298,6 +302,7 @@
 				93024467255E00CF00DA503F /* AppDelegate.swift in Sources */,
 				9302447B255E00E900DA503F /* FuelView.swift in Sources */,
 				93024483255E00E900DA503F /* SavedDataView.swift in Sources */,
+				93C1780F26C0808C006CA69B /* MomentTextField.swift in Sources */,
 				93024482255E00E900DA503F /* AEWPositionWeightView.swift in Sources */,
 				93024463255E00CF00DA503F /* NumberTextfield.swift in Sources */,
 				93024466255E00CF00DA503F /* CustomPickerView.swift in Sources */,
@@ -311,7 +316,6 @@
 				9332EEFA2661BE12008D0DF8 /* MiscFunctions.swift in Sources */,
 				93024480255E00E900DA503F /* HeaderSubView.swift in Sources */,
 				935A4E892662D2F5007CDD66 /* BasicWeights.swift in Sources */,
-				93AFD15C26A77F8A00F660E3 /* DoubleTextfield.swift in Sources */,
 				9332EEF5266155B6008D0DF8 /* WeightExceeded.swift in Sources */,
 				9302447E255E00E900DA503F /* HeaderView.swift in Sources */,
 			);

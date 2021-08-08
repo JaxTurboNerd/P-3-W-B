@@ -12,6 +12,7 @@ import Combine
 struct HorizontalInputView: View {
     var label:String
     var maxWeight: Int
+    var maxChars: Int
     @Binding var weight: Int
     
     var body: some View {
@@ -30,13 +31,13 @@ struct HorizontalInputView: View {
             Text(label)
                 .frame(width: 160.0)
             Divider()
-            NumberTextField(value: $weight, maxValue: maxWeight)
+            NumberTextField(value: $weight, maxValue: maxWeight, maxChars: maxChars)
         }//end HStack
     }//end weightView
 }//end struct
 
 struct InputView_Previews: PreviewProvider {
     static var previews: some View {
-        HorizontalInputView(label: "Pilot: ", maxWeight: 0, weight: Binding.constant(000))
+        HorizontalInputView(label: "Pilot: ", maxWeight: 0, maxChars: 3, weight: Binding.constant(000))
     }
 }

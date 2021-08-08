@@ -1,43 +1,42 @@
 //
-//  NumberTextfield.swift
-//  W&BSwiftUI
+//  MomentTextField.swift
+//  P-3-WnB
 //
-//  Created by Gregory Boyd on 10/25/20.
-//  Copyright © 2020 Gregory Boyd. All rights reserved.
+//  Created by Gregory Boyd on 8/8/21.
 //
 
 import SwiftUI
 
-struct NumberTextField<V>: UIViewRepresentable where V: Numeric & LosslessStringConvertible {
+struct MomentTextField<V>: UIViewRepresentable where V: LosslessStringConvertible {
     @Binding var value: V
-    var maxValue: Int
+    var maxValue: Double
     var maxChars: Int
     
     typealias UIViewType = UITextField
 
-    func makeUIView(context: UIViewRepresentableContext<NumberTextField>) -> UITextField {
+    func makeUIView(context: UIViewRepresentableContext<MomentTextField>) -> UITextField {
         let editField = UITextField()
         editField.delegate = context.coordinator
         return editField
     }
 
-    func updateUIView(_ editField: UITextField, context: UIViewRepresentableContext<NumberTextField>) {
+    func updateUIView(_ editField: UITextField, context: UIViewRepresentableContext<MomentTextField>) {
         editField.text = String(value)
         editField.textAlignment = .center
         editField.keyboardType = .numberPad
     }
 
-    func makeCoordinator() -> NumberTextField.Coordinator {
+    func makeCoordinator() -> MomentTextField.Coordinator {
         //create instance of class Coordinator:
         Coordinator(value: $value, maxValue: maxValue, maxChars: maxChars)
     }
 
     class Coordinator: NSObject, UITextFieldDelegate {
         var value: Binding<V>
-        var maxValue: Int
+        var maxValue: Double
         var maxChars: Int
         
-        init(value: Binding<V>, maxValue: Int, maxChars: Int) {
+        init(value: Binding<V>, maxValue: Double, maxChars: Int) {
             self.value = value
             self.maxValue = maxValue
             self.maxChars = maxChars
@@ -61,23 +60,24 @@ struct NumberTextField<V>: UIViewRepresentable where V: Numeric & LosslessString
             let lengthToReplace = range.length
             let newLength = startingLength + lengthToAdd - lengthToReplace
             
-            if let number = V(newValue ?? "0") {
-                if newLength <= maxChars {
-                    self.value.wrappedValue = number
-                    return true
-                }
+            //code to set the allowed characters to be entered by the user:
+            let charactersAllowed = CharacterSet(charactersIn: ".0123456789")
+            //let rangeOfCharacters = string.rangeOfCharacter(from: charactersAllowed, options: .caseInsensitive)
+                    
+            if let rangeOfCharactersAllowed = string.rangeOfCharacter(from: charactersAllowed) {
+                self.value.wrappedValue = rangeOfCharactersAllowed as! V
+                return newLength <= maxChars
             } else {
                 if nil == newValue || newValue!.isEmpty {
-                    self.value.wrappedValue = 0
+                    self.value.wrappedValue = 0 as! V
                 }
                 return false
             }
-            return false
         }
         
         //validate maximum values entered by user:
         func textFieldShouldEndEditing(_ textField: UITextField) -> Bool {
-            let textValue = Int(textField.text!)
+            let textValue = Double(textField.text!)
             if(textValue! > maxValue){
                 textField.backgroundColor = UIColor.red.withAlphaComponent(0.2)
                 return false

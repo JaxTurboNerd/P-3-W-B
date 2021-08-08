@@ -35,20 +35,20 @@ struct AEWPositionWeightView: View {
                 Spacer()
                 
                 VStack(spacing: 10.0) {
-                    HorizontalInputView(label: "Pilot:", maxWeight: 500, weight: $aircraftData.pilot)
-                    HorizontalInputView(label: "Co-Pilot:", maxWeight: 500, weight: $aircraftData.copilot)
-                    HorizontalInputView(label: "FE", maxWeight: 500, weight: $aircraftData.fe)
-                    HorizontalInputView(label: "Flight Sta Obs:", maxWeight: 500, weight: $aircraftData.flightStaObs)
-                    HorizontalInputView(label: "Radar Bay:", maxWeight: 500, weight: $aircraftData.radarCompartment)
-                    HorizontalInputView(label: "TFO1:", maxWeight: 500, weight: $aircraftData.tfo1)
-                    HorizontalInputView(label: "TFO2:", maxWeight: 500, weight: $aircraftData.tfo2)
+                    HorizontalInputView(label: "Pilot:", maxWeight: 500, maxChars: 3, weight: $aircraftData.pilot)
+                    HorizontalInputView(label: "Co-Pilot:", maxWeight: 500, maxChars: 3, weight: $aircraftData.copilot)
+                    HorizontalInputView(label: "FE", maxWeight: 500, maxChars: 3, weight: $aircraftData.fe)
+                    HorizontalInputView(label: "Flight Sta Obs:", maxWeight: 500, maxChars: 3, weight: $aircraftData.flightStaObs)
+                    HorizontalInputView(label: "Radar Bay:", maxWeight: 500, maxChars: 3, weight: $aircraftData.radarCompartment)
+                    HorizontalInputView(label: "TFO1:", maxWeight: 500, maxChars: 3, weight: $aircraftData.tfo1)
+                    HorizontalInputView(label: "TFO2:", maxWeight: 500, maxChars: 3, weight: $aircraftData.tfo2)
                     Group{
-                        HorizontalInputView(label: "TFO3:", maxWeight: 500, weight: $aircraftData.tfo3)
-                        HorizontalInputView(label: "TFO4:", maxWeight: 500, weight: $aircraftData.tfo4)
-                        HorizontalInputView(label: "TFO5:", maxWeight: 500, weight: $aircraftData.tfo5)
-                        HorizontalInputView(label: "First Class Seats:", maxWeight: 1000, weight: $aircraftData.firstClassSeats)
-                        HorizontalInputView(label: "Port Aft Obs:", maxWeight: 500, weight: $aircraftData.portAftObs)
-                        HorizontalInputView(label: "Stb Aft Obs:", maxWeight: 500, weight: $aircraftData.stbAftObs)
+                        HorizontalInputView(label: "TFO3:", maxWeight: 500, maxChars: 3, weight: $aircraftData.tfo3)
+                        HorizontalInputView(label: "TFO4:", maxWeight: 500, maxChars: 3, weight: $aircraftData.tfo4)
+                        HorizontalInputView(label: "TFO5:", maxWeight: 500, maxChars: 3, weight: $aircraftData.tfo5)
+                        HorizontalInputView(label: "First Class Seats:", maxWeight: 1000, maxChars: 3, weight: $aircraftData.firstClassSeats)
+                        HorizontalInputView(label: "Port Aft Obs:", maxWeight: 500, maxChars: 3, weight: $aircraftData.portAftObs)
+                        HorizontalInputView(label: "Stb Aft Obs:", maxWeight: 500, maxChars: 3, weight: $aircraftData.stbAftObs)
                     }//end Group
                 }//end VStack
                 Spacer()
