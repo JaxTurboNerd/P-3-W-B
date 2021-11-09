@@ -53,6 +53,7 @@ struct AircraftUserInfo: View {
                             })
                             .padding(5)
                             .background(RoundedRectangle(cornerRadius: 10).stroke(Color.orange))
+                            .frame(width: 160, height: 50, alignment: .trailing)
                             
                             Divider()
                             TextField("Aircraft", text: $aircraftData.selectedAircraft)
@@ -61,27 +62,24 @@ struct AircraftUserInfo: View {
                         .font(.title2)
                         
                         HStack{
-                            Text("    Basic Weight:")
-                                .frame(width: 160, height: 50)
-                                .multilineTextAlignment(.trailing)
+                            Text("Basic Weight:")
+                                .frame(width: 160, height: 50, alignment: .trailing)
                             Divider()
                             NumberTextField(value: $aircraftData.basicWeight, maxValue: 75000, maxChars: 5)
                         }
                         .font(.title2)
                         HStack {
-                            Text("Aircraft Moment:")
-                                .frame(width: 160, height: 50)
-                                .multilineTextAlignment(.trailing)
+                            Text("A/C Moment:")
+                                .frame(width: 160, height: 50, alignment: .trailing)
                             Divider()
                             MomentTextField(value: $aircraftData.aircraftMoment, maxValue: 40000.03, maxChars: 6)
-//                            DoubleTextField(value: $aircraftData.aircraftMoment, maxValue: 39000.0, maxChars: 7)
                         }
                         .font(.title2)
                     }
                 }//end VStack
                 .background(Color(UIColor.secondarySystemBackground))
                 .cornerRadius(10)
-                .frame(width: 400, height: 280)
+                .frame(width: 400, height: 300)
                 .padding(.horizontal, 10)
                 .padding(.top, 20)
                 Spacer()
@@ -93,12 +91,8 @@ struct AircraftUserInfo: View {
                     AircraftListView(aircraftList: aewList)
                 }
             })
-            if aircraftData.presentAircraftList {
-                
-            }
         }//end ZStack
         .edgesIgnoringSafeArea(.all)
-    
     }
 }
 
