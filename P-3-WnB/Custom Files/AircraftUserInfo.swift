@@ -52,9 +52,8 @@ struct AircraftUserInfo: View {
                                 Text("Select Aircraft")
                             })
                             .padding(5)
-                            .background(RoundedRectangle(cornerRadius: 10).stroke(Color.orange))
                             .frame(width: 160, height: 50, alignment: .trailing)
-                            
+                
                             Divider()
                             TextField("Aircraft", text: $aircraftData.selectedAircraft)
                                 .multilineTextAlignment(.center)
@@ -96,6 +95,7 @@ struct AircraftUserInfo: View {
     }
 }
 
+@available(iOS 15.0, *)
 struct AircraftUserInfo_Previews: PreviewProvider {
     
     static var previews: some View {
