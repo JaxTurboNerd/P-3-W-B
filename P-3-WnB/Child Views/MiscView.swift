@@ -12,41 +12,33 @@ struct MiscView: View {
     @EnvironmentObject private var aircraftData:AircraftData
     
     //Picker view setup:
-    //@State private var pickerSelection: String = "Mission"
+    @State private var pickerSelection: String = "Mission"
     let missionTypes:[String] = ["Mission", "Transit", "Training", "Other"]
     
     var body: some View {
         VStack{
             HStack {
-                Spacer()
-                Picker(selection: $aircraftData.missionType,
-                       label:
+                Text("Flight Profile: ")
+                Picker(selection: $pickerSelection,
+                       label: //This basically does nothing:
                         HStack {
                             Text("Flight Profile:")
-                            Text(aircraftData.missionType)
                         }
-                        .font(.subheadline)
-                        .foregroundColor(Color.white)
-                        .padding()
-                        .padding(.horizontal)
-                        .background(Color.blue.opacity(0.8))
-                        .cornerRadius(10)
-                        .shadow(color: Color.blue.opacity(0.3),
-                                radius: 10, x: 0, y: 10)
                        ,
                        content: {
-                        ForEach(missionTypes, id: \.self, content: {option in
-                            Text(option)
-                                .tag(option).font(.headline)
-                                
+                        ForEach(missionTypes, id: \.self, content: {
+                            Text($0)
+                                .tag($0)
                         })
                 })
-                    .pickerStyle(MenuPickerStyle())
-                Spacer()
+                    .pickerStyle(.menu)
             }//end HStack
             .padding()
+            .background(Color.gray.opacity(0.4))
+            .cornerRadius(15)
+            
             ButtonView()
-            Spacer()
+                .padding(.top)
         }//end VStack
         .padding()
     }//end some View

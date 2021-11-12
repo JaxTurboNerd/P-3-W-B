@@ -14,9 +14,9 @@ extension LRTPositionWeightView {
     @State static var LRTbasicWeights = ["N403SK": 63915,
                                          "N480SK": 66414,
                                          "N741SK": 64692]
-    @State static var LRTMoments = [     "N403SK": 36747.8,
-                                         "N480SK": 38398.6,
-                                         "N741SK": 37311.6]
+    @State static var LRTMoments = [     "N403SK": 36747,
+                                         "N480SK": 38398,
+                                         "N741SK": 37311]
 }
 
 extension AEWPositionWeightView {
@@ -26,9 +26,9 @@ extension AEWPositionWeightView {
                                             "N145CS": 71927,
                                             "N146CS": 72179,
                                             "N149CS": 72510]
-    @State static var AEWMoments = [        "N144CS": 42256.7,
-                                            "N145CS": 42212.1,
-                                            "N146CS": 42232.4,
-                                            "N149CS": 42482.1]
+    @State static var AEWMoments = [        "N144CS": 42256,
+                                            "N145CS": 42212,
+                                            "N146CS": 42232,
+                                            "N149CS": 42482]
 }
 

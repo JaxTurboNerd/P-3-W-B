@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 52;
+	objectVersion = 50;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -36,11 +36,8 @@
 		935A4E892662D2F5007CDD66 /* BasicWeights.swift in Sources */ = {isa = PBXBuildFile; fileRef = 935A4E882662D2F5007CDD66 /* BasicWeights.swift */; };
 		93667E012660710B0088D7D5 /* GrossWeightSubView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93667E002660710B0088D7D5 /* GrossWeightSubView.swift */; };
 		93667E03266079A40088D7D5 /* ZfwSubView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93667E02266079A40088D7D5 /* ZfwSubView.swift */; };
-		93736B8326BDDD3600CF1244 /* NumericText in Frameworks */ = {isa = PBXBuildFile; productRef = 93736B8226BDDD3600CF1244 /* NumericText */; };
 		93AFD15A26A6493500F660E3 /* AircraftUserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93AFD15926A6493500F660E3 /* AircraftUserInfo.swift */; };
 		93AFD15E26A799D700F660E3 /* AircraftListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93AFD15D26A799D700F660E3 /* AircraftListView.swift */; };
-		93C1780D26C07B9B006CA69B /* BasicWeightTxtField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C1780C26C07B9B006CA69B /* BasicWeightTxtField.swift */; };
-		93C1780F26C0808C006CA69B /* MomentTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C1780E26C0808C006CA69B /* MomentTextField.swift */; };
 		93D49EB02623A27D0082B346 /* P-3Wnb.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 93D49EAE2623A27D0082B346 /* P-3Wnb.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
@@ -78,8 +75,6 @@
 		93667E02266079A40088D7D5 /* ZfwSubView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZfwSubView.swift; sourceTree = "<group>"; };
 		93AFD15926A6493500F660E3 /* AircraftUserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AircraftUserInfo.swift; sourceTree = "<group>"; };
 		93AFD15D26A799D700F660E3 /* AircraftListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AircraftListView.swift; sourceTree = "<group>"; };
-		93C1780C26C07B9B006CA69B /* BasicWeightTxtField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicWeightTxtField.swift; sourceTree = "<group>"; };
-		93C1780E26C0808C006CA69B /* MomentTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MomentTextField.swift; sourceTree = "<group>"; };
 		93D49EAF2623A27D0082B346 /* P-3Wnb.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "P-3Wnb.xcdatamodel"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -88,7 +83,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				93736B8326BDDD3600CF1244 /* NumericText in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -177,8 +171,6 @@
 				9302445D255E00CF00DA503F /* NumberTextfield.swift */,
 				93AFD15926A6493500F660E3 /* AircraftUserInfo.swift */,
 				93AFD15D26A799D700F660E3 /* AircraftListView.swift */,
-				93C1780C26C07B9B006CA69B /* BasicWeightTxtField.swift */,
-				93C1780E26C0808C006CA69B /* MomentTextField.swift */,
 			);
 			path = "Custom Files";
 			sourceTree = "<group>";
@@ -227,7 +219,6 @@
 			);
 			name = "P-3-WnB";
 			packageProductDependencies = (
-				93736B8226BDDD3600CF1244 /* NumericText */,
 			);
 			productName = "W&BUserDefaults";
 			productReference = 93024443255E002B00DA503F /* P-3-WnB.app */;
@@ -258,7 +249,6 @@
 			);
 			mainGroup = 9302443A255E002B00DA503F;
 			packageReferences = (
-				93736B8126BDDD3600CF1244 /* XCRemoteSwiftPackageReference "NumericText" */,
 			);
 			productRefGroup = 93024444255E002B00DA503F /* Products */;
 			projectDirPath = "";
@@ -288,7 +278,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				93024481255E00E900DA503F /* CargoView.swift in Sources */,
-				93C1780D26C07B9B006CA69B /* BasicWeightTxtField.swift in Sources */,
 				93024485255E00E900DA503F /* ButtonView.swift in Sources */,
 				93667E012660710B0088D7D5 /* GrossWeightSubView.swift in Sources */,
 				9332EEF7266159D0008D0DF8 /* CGsubView.swift in Sources */,
@@ -302,7 +291,6 @@
 				93024467255E00CF00DA503F /* AppDelegate.swift in Sources */,
 				9302447B255E00E900DA503F /* FuelView.swift in Sources */,
 				93024483255E00E900DA503F /* SavedDataView.swift in Sources */,
-				93C1780F26C0808C006CA69B /* MomentTextField.swift in Sources */,
 				93024482255E00E900DA503F /* AEWPositionWeightView.swift in Sources */,
 				93024463255E00CF00DA503F /* NumberTextfield.swift in Sources */,
 				93024466255E00CF00DA503F /* CustomPickerView.swift in Sources */,
@@ -522,25 +510,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		93736B8126BDDD3600CF1244 /* XCRemoteSwiftPackageReference "NumericText" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/amayers/NumericText.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 1.1.2;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		93736B8226BDDD3600CF1244 /* NumericText */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 93736B8126BDDD3600CF1244 /* XCRemoteSwiftPackageReference "NumericText" */;
-			productName = NumericText;
-		};
-/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		93D49EAE2623A27D0082B346 /* P-3Wnb.xcdatamodeld */ = {

@@ -13,11 +13,11 @@ final class AircraftData: ObservableObject {
     @Published var selectedAircraft = ""
     @Published var presentPicker = false
     @Published var presentAircraftList = false;
-    @Published var basicWeight = 00000
+    @Published var basicWeight = 60000
     @Published var savedDate = "MMM dd YYYY"
     @Published var alertTrigger = false
     @Published var aircraftIsLRT = false
-    @Published var aircraftMoment = 0.0
+    @Published var aircraftMoment = 36000
     @Published var showSavedAlert = false
     @Published var generatorInstalled = true
     @Published var missionType = "Other"
@@ -368,7 +368,7 @@ final class AircraftData: ObservableObject {
         get {
             //This is so CG will show 0 when the app first starts.
             if screenJustLoaded {
-                return "0"
+                return "0.0"
             }
             else {
                 return String((((((totalMoment/Double(grossWeight)!) - leadingEdgeMAC)/MAC) * 1000.0).rounded())/10.0)

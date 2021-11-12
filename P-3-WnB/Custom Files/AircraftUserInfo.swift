@@ -6,7 +6,6 @@
 //
 
 import SwiftUI
-import NumericText
 
 struct AircraftUserInfo: View {
     @EnvironmentObject private var aircraftData: AircraftData
@@ -55,8 +54,10 @@ struct AircraftUserInfo: View {
                             .frame(width: 160, height: 50, alignment: .trailing)
                 
                             Divider()
-                            TextField("Aircraft", text: $aircraftData.selectedAircraft)
-                                .multilineTextAlignment(.center)
+                            Text("\(aircraftData.selectedAircraft)")
+                                .frame(maxWidth: .infinity, alignment: .center)
+                            //                            TextField("Aircraft", text: $aircraftData.selectedAircraft)
+//                                .multilineTextAlignment(.center)
                         }
                         .font(.title2)
                         
@@ -64,14 +65,15 @@ struct AircraftUserInfo: View {
                             Text("Basic Weight:")
                                 .frame(width: 160, height: 50, alignment: .trailing)
                             Divider()
-                            NumberTextField(value: $aircraftData.basicWeight, maxValue: 75000, maxChars: 5)
+                            NumberTextField(value: $aircraftData.basicWeight, maxValue: 85000, maxChars: 5)
                         }
                         .font(.title2)
                         HStack {
                             Text("A/C Moment:")
                                 .frame(width: 160, height: 50, alignment: .trailing)
                             Divider()
-                            MomentTextField(value: $aircraftData.aircraftMoment, maxValue: 40000.03, maxChars: 6)
+                            NumberTextField(value: $aircraftData.aircraftMoment, maxValue: 50000, maxChars: 5)
+//                            MomentTextField(value: $aircraftData.aircraftMoment, maxValue: 50000, maxChars: 6)
                         }
                         .font(.title2)
                     }
