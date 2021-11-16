@@ -1,5 +1,5 @@
 # P-3-W-B
-This iOS App calculates the weight and balance for CBP P-3 Orion aircraft.  The app is available on the Apple App Store. <br/> Use this search: "P3 W&B"
+This iOS App calculates the weight and balance for CBP P-3 Orion aircraft.<br/>The app is available on the Apple App Store. <br/> Use this search: "P3 W&B"
 ## Features
 1. Core Data to save typical flight profiles
 2. User can choose between an LRT or AEW aircraft configuration
@@ -13,3 +13,6 @@ This iOS App calculates the weight and balance for CBP P-3 Orion aircraft.  The 
 5. Zero Fuel Weight, Gross Weight and CG are calculated automatically!
 6. Select the flight profile for the flight
 7. Save the flight's information if needed!
+
+### Features I would like to Add:
+* The ability to select a saved flight profile, then have that flight's data loaded into the applicable screen (LRT or AEW) so the user can easily modify a saved flight. Basically, incorporate update functions of Core Data into the app.
