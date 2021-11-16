@@ -33,7 +33,6 @@
 		9332EEF5266155B6008D0DF8 /* WeightExceeded.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9332EEF4266155B6008D0DF8 /* WeightExceeded.swift */; };
 		9332EEF7266159D0008D0DF8 /* CGsubView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9332EEF6266159D0008D0DF8 /* CGsubView.swift */; };
 		9332EEFA2661BE12008D0DF8 /* MiscFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9332EEF92661BE12008D0DF8 /* MiscFunctions.swift */; };
-		935A4E892662D2F5007CDD66 /* BasicWeights.swift in Sources */ = {isa = PBXBuildFile; fileRef = 935A4E882662D2F5007CDD66 /* BasicWeights.swift */; };
 		93667E012660710B0088D7D5 /* GrossWeightSubView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93667E002660710B0088D7D5 /* GrossWeightSubView.swift */; };
 		93667E03266079A40088D7D5 /* ZfwSubView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93667E02266079A40088D7D5 /* ZfwSubView.swift */; };
 		93AFD15A26A6493500F660E3 /* AircraftUserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93AFD15926A6493500F660E3 /* AircraftUserInfo.swift */; };
@@ -70,7 +69,6 @@
 		9332EEF4266155B6008D0DF8 /* WeightExceeded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeightExceeded.swift; sourceTree = "<group>"; };
 		9332EEF6266159D0008D0DF8 /* CGsubView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGsubView.swift; sourceTree = "<group>"; };
 		9332EEF92661BE12008D0DF8 /* MiscFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiscFunctions.swift; sourceTree = "<group>"; };
-		935A4E882662D2F5007CDD66 /* BasicWeights.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicWeights.swift; sourceTree = "<group>"; };
 		93667E002660710B0088D7D5 /* GrossWeightSubView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GrossWeightSubView.swift; sourceTree = "<group>"; };
 		93667E02266079A40088D7D5 /* ZfwSubView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZfwSubView.swift; sourceTree = "<group>"; };
 		93AFD15926A6493500F660E3 /* AircraftUserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AircraftUserInfo.swift; sourceTree = "<group>"; };
@@ -180,7 +178,6 @@
 			children = (
 				9332EEF4266155B6008D0DF8 /* WeightExceeded.swift */,
 				9332EEF92661BE12008D0DF8 /* MiscFunctions.swift */,
-				935A4E882662D2F5007CDD66 /* BasicWeights.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -303,7 +300,6 @@
 				93024465255E00CF00DA503F /* SceneDelegate.swift in Sources */,
 				9332EEFA2661BE12008D0DF8 /* MiscFunctions.swift in Sources */,
 				93024480255E00E900DA503F /* HeaderSubView.swift in Sources */,
-				935A4E892662D2F5007CDD66 /* BasicWeights.swift in Sources */,
 				9332EEF5266155B6008D0DF8 /* WeightExceeded.swift in Sources */,
 				9302447E255E00E900DA503F /* HeaderView.swift in Sources */,
 			);
