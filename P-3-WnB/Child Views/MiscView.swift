@@ -29,9 +29,10 @@ struct MiscView: View {
                         ForEach(missionTypes, id: \.self, content: {
                             Text($0)
                                 .tag($0)
+                                .font(.largeTitle)//not working
                         })
                 })
-                    .pickerStyle(.menu)
+                    .pickerStyle(.menu)//This is the default
             }//end HStack
             .padding()
             .background(Color.gray.opacity(0.4))

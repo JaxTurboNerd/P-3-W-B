@@ -20,8 +20,7 @@ struct HorizontalInputView: View {
             Rectangle()
                 .colorInvert()
                 .border(Color.gray, width: 2)
-                .shadow(color: .gray, radius: 4, y: 4)
-                .frame(width: 225.0, height: 35.0)
+                .frame(width: 230.0, height: 35.0)
                 .overlay(weightView)
         }//end ZStack
     }//end some view
@@ -30,7 +29,7 @@ struct HorizontalInputView: View {
         HStack {
             Text(label)
                 .frame(width: 160.0)
-            Divider()
+            //Divider()
             NumberTextField(value: $weight, maxValue: maxWeight, maxChars: maxChars)
         }//end HStack
     }//end weightView

@@ -19,17 +19,15 @@ struct VertInputView: View {
             Rectangle()
                 .colorInvert()
                 .border(Color.gray, width: 2)
-                .shadow(color: .gray, radius: 4, y: 4)
-                .frame(width: 110.0, height: 85.0)
+                .frame(width: 110.0, height: 90.0)
                 .overlay(weightView)
         }//end ZStack
     }//end some view
     
     var weightView: some View {
-        VStack(alignment: .center) {
+        VStack() {
             Text(label)
                 .frame(width: 110.0)
-                .lineLimit(2)
                 .fixedSize(horizontal: false, vertical: true)
             Divider()
             NumberTextField(value: $weight, maxValue: maxWeight, maxChars: maxChars)
